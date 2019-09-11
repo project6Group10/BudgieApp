@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class ExpenseList extends Component {
+class InputExpenses extends Component {
     constructor(props) {
         super(props);
         this.state = {  }
@@ -12,4 +12,4 @@ class ExpenseList extends Component {
     }
 }
  
-export default ExpenseList;
+export default InputExpenses;

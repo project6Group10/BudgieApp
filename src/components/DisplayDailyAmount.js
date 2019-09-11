@@ -1,9 +1,7 @@
 import React from 'react';
 
-const Expenses = () => {
+const DisplayDailyAmount = () => {
     return (
         <div></div>
     )
 }
-
-export default Expenses;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DailyBudget = () => {
+const DisplayExpenseItems = () => {
     return (
         <div></div>
     )

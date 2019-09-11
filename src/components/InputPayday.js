@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 
-class AddExpenses extends Component {
+class InputPayday extends Component {
     constructor(props) {
         super(props);
-        this.state = {  }
+        this.state = { 
+
+         }
     }
     render() { 
         return ( 
@@ -12,4 +14,4 @@ class AddExpenses extends Component {
     }
 }
  
-export default AddExpenses;
+export default InputPayday;

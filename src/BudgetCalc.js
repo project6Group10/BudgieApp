@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Budget.scss';
 
-class Budegt extends Component {
+class Budget extends Component {
     constructor(props) {
         super(props);
         this.state = {  }
@@ -78,4 +78,4 @@ class Budegt extends Component {
     }
 }
  
-export default Budegt;
+export default Budget;
