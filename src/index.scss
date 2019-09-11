@@ -1,13 +1,51 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --color-primary: #42e69f;
+  --color-primary-light: #dfffec;
+  --color-primary-dark: #1f3a33;
+
+ 
+  --color-white : #fff; 
+  --color-grey-dark-1: #333;
+  --color-grey-dark-2: #777;
+  --color-grey-light: #e7e7e7;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+$bp-largest: 75em;     // 1200px
+$bp-large: 68.75em;    // 1100px
+$bp-medium: 56.25em;   // 900px
+$bp-small: 46.75em;     // 784px
+
+// font-family: 'Sirin Stencil', cursive;
+// font-family: 'Barlow', sans-serif;
+
+//
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+}
+
+
+body {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-grey-dark-2);
+}
+
+
+.Container {
+  width: 120rem;
+  margin: 7rem auto;
+  display: flex;
+  justify-content: space-between;
 }

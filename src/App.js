@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
+import Budget from './BudgetCalc';
 import './App.scss';
 
-function App() {
-  return (
-    <div className="App">
-        <h1>Budgie</h1>
-    </div>
-  );
+class App extends Component {
+  state = {  }
+  render() { 
+    return ( 
+      <div className="App">
+           <Budget/>
+      </div>
+     );
+  }
 }
-
+ 
 export default App;
+
+
