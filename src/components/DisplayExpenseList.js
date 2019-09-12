@@ -1,23 +1,38 @@
 import React, { Component } from 'react';
+import firebase from '../firebase';
+import DisplayExpenseItems from './DisplayExpenseItems';
 
 class DisplayExpenseList extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {  }
+    constructor() {
+        super();
+        this.state = {
+            expenseLog: {},
+        }
     }
+
+    componentDidMount() {
+        //UPDATES EXPENSELOG STATE ON FIREBASE CHANGE
+        const dbRef = firebase.database().ref().child('expenseItems')
+        dbRef.on('value', expenses => {
+            this.setState({
+                expenseLog: expenses.val(),
+            });
+        });
+    }
+
     render() { 
         return ( 
             <div className="Expenses__list">
-                <div className="Item " id="expense-0">
-                    <div className="Item__inbox">
-                        <div className="Item__description">Apartment rent</div>
-                        <div className="Item__value">- 900.00</div>
-                        <div className="Item__percentage">21%</div>
-                        <div className="Item__delete">
-                            <button className="Item__delete--btn"><i className="far fa-times-circle"></i></button>
+                {Object.keys(this.state.expenseLog).map((expense, index) => {
+                    return (
+                        <div className="Item" key={index}>
+                            <DisplayExpenseItems 
+                                name={this.state.expenseLog[expense]['expenseName']}
+                                amount={this.state.expenseLog[expense]['expenseAmount']}
+                            />
                         </div>
-                    </div>
-                </div>
+                    );
+                })}
             </div>
         );
     }
