@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Budget from './BudgetCalc';
-import './App.scss';
+import './sass/App.scss';
 import CalcDailyBudget from './components/CalcDailyBudget';
 import DisplayExpenses from './components/DisplayExpenses';
 import DisplayPayday from './components/DisplayPayday';
