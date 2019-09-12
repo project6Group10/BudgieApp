@@ -10,11 +10,23 @@ class InputPayday extends Component {
     constructor(props) {
         super(props);
         this.state = { 
+            currentSalary: 0,
             salaryInput: 0,
             salaryDateInput: '',
         }
 
         this.salaryRef = firebase.database();
+    }
+
+    componentDidMount() {
+        this.salaryRef.ref().on('value', (data) => {
+            const response = data.val();
+            console.log(response);
+
+            this.setState({
+                currentSalary: response.salaryAmount
+            })
+        })
     }
 
     handleSalaryInput = (event) => {
