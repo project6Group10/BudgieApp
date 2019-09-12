@@ -29,6 +29,7 @@ class DisplayExpenseList extends Component {
                             <DisplayExpenseItems 
                                 name={this.state.expenseLog[expense]['expenseName']}
                                 amount={this.state.expenseLog[expense]['expenseAmount']}
+                                uid={expense}
                             />
                         </div>
                     );
