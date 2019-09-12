@@ -4,7 +4,6 @@ class CalcExpenseTotal extends Component {
     constructor() {
         super();
         this.state = {
-            expenseArray: [],
             expenseTotal: [],
         }
     }
@@ -12,19 +11,20 @@ class CalcExpenseTotal extends Component {
     componentDidMount() {
         const expRef = firebase.database().ref('expenseItems').orderByChild('expenseAmount')
         expRef.on('value', expenses => {
+            const expenseArray = expenses.val()
+            const newArray = [];
+            for (let key in expenseArray) {
+                newArray.push(Number(expenseArray[key].expenseAmount));
+            }
+            const reducer = (a, b) => a + b;
+            const total = newArray.reduce(reducer)
             this.setState({
-                expenseArray: expenses.val(),
+                expenseTotal: total,
             })
+            
         })
+        
     }
-
-    componentDidUpdate() {
-        console.log(this.state.expenseArray);
-        for (let key in this.state.expenseArray) {
-            console.log(key)
-        }
-    }
-    
 
     render() {
         return (
