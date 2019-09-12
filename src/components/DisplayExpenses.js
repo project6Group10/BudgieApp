@@ -1,6 +1,7 @@
 import React from 'react';
 import InputExpenses from './InputExpenses';
 import DisplayExpenseList from './DisplayExpenseList';
+import CalcExpenseTotal from './CalcExpenseTotal';
 
 const DisplayExpenses = () => {
     return (
@@ -8,6 +9,7 @@ const DisplayExpenses = () => {
             <div className="Expenses">
                 <InputExpenses />
                 <DisplayExpenseList />
+                <CalcExpenseTotal />
             </div>
         </div> 
     )
