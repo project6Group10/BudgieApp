@@ -21,11 +21,15 @@ class CalcPayday extends Component {
     }
 
     componentDidMount() {
-        const dateRef = firebase.database().ref().child('salaryItems')
-        this.getTodaysDate();
-        console.log(Object.keys(this.dateRef));
-        
-        
+        const dateRef = firebase.database().ref('salaryItems').orderByChild('salaryDate')
+        dateRef.on('value', date => {
+            const dateArray = date.val();
+            for (let key in dateArray) {
+                this.setState({
+                    nextPayday: dateArray[key].salaryDate
+                })
+            }
+        })
     }
     
     render() {
