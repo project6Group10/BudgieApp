@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Budget.scss';
+import './sass/Budget.scss';
 
 class Budget extends Component {
     constructor(props) {
