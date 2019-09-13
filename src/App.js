@@ -8,6 +8,7 @@ import Header from './components/Header';
 import About from './components/About';
 import Footer from './components/Footer';
 import CalcExpenseTotal from './components/CalcExpenseTotal';
+import Test from './components/Test';
 
 class App extends Component {
   state = {  }
@@ -20,6 +21,7 @@ class App extends Component {
            <div className="Container">
               <InputPayday />
               <DisplayExpenses />
+              <Test/>
            </div>
            <Footer/>
       </div>

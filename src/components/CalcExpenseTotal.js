@@ -23,9 +23,8 @@ class CalcExpenseTotal extends Component {
             this.setState({
                 expenseTotal: total,
             })
-            console.log(this.state.expenseTotal)
         })
-        
+
     }
 
     render() {
