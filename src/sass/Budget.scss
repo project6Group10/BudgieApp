@@ -1,11 +1,11 @@
-@import "./index.scss";
+@import "../index.scss";
 
 /////////////////////////////////
 //Header STYLES
 /////////////////////////////////
 .header {
   height: 95vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(./cover.jpeg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(../cover.jpeg);
   background-size: cover;
   background-position: bottom;
   background-attachment: fixed;
@@ -415,7 +415,8 @@ flex: 1;
 /////////////////////////////////
 //DATE STYLES
 ///////////////////////////////// 
-.Date {
+.Salary {
+    
     &__input {  
     }
     &__description {

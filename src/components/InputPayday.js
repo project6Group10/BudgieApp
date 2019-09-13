@@ -17,12 +17,13 @@ class InputPayday extends Component {
         }
 
         this.salaryRef = firebase.database().ref().child('salaryItems');
+        this.salaryInputRef = React.createRef();
     }
 
     componentDidMount() {
         this.salaryRef.on('value', (data) => {
             const response = data.val();
-            console.log(response);
+            console.log("InputPayDay-> response: ",response);
             this.setState({
                 currentSalary: response.salaryAmount
             })
@@ -30,7 +31,7 @@ class InputPayday extends Component {
     }
 
     handleSalaryInput = (event) => {
-        console.log(this.state.salaryInput);        
+        console.log("InputPayDay-> salaryInput: ", this.state.salaryInput);        
         this.setState({
             salaryInput: event.target.value
         })
@@ -45,7 +46,6 @@ class InputPayday extends Component {
 
     handleSalarySubmit = (event) => {
         event.preventDefault();
-        console.log(this.state.salaryInput);
 
         if (this.state.salaryInput > 0 && this.state.salaryDateInput) {
             this.salaryRef.push({
@@ -58,8 +58,11 @@ class InputPayday extends Component {
                 salaryDateInput: 0,
             });
 
+            this.salaryInputRef.current.reset();
+
         } else if (this.state.salaryInput <= 0) {
             alert("Enter a salary amount greater than 0!");
+            this.salaryInputRef.current.reset();
         } else if (this.state.salaryDateInput === '') {
             alert("Please enter a pay date!");
         } else {
@@ -70,6 +73,7 @@ class InputPayday extends Component {
     render() { 
         return ( 
             <DisplayPayday 
+                salaryInputRef={this.salaryInputRef}
                 salaryInput={this.handleSalaryInput}
                 dateInput={this.handleSalaryDateInput}
                 buttonClick={this.handleSalarySubmit}

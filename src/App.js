@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import Budget from './BudgetCalc';
 import './sass/App.scss';
+
+// FIXME: Need to get rid of Budget.scss and split them into partials
+import './sass/Budget.scss';
 import CalcDailyBudget from './components/CalcDailyBudget';
 import DisplayExpenses from './components/DisplayExpenses';
 import InputPayday from './components/InputPayday';
@@ -12,16 +14,16 @@ class App extends Component {
   state = {  }
   render() { 
     return ( 
-      <div className="App">
-          <Header/>
-          <About/>
-           <CalcDailyBudget />
-           <div className="Container">
-              <InputPayday />
-              <DisplayExpenses />
-           </div>
-           <Footer/>
-      </div>
+        <div className="App">
+            <Header/>
+            <About/>
+            <CalcDailyBudget />
+            <div className="Container">
+                <InputPayday />
+                <DisplayExpenses />
+            </div>
+            <Footer/>
+        </div>
      );
   }
 }

@@ -1,18 +1,19 @@
 import React from 'react';
+import DisplayPaydayList from './DisplayPaydayList';
 
 const DisplayPayday = (props) => {
     return (
         <div>
-            <div className="Date"> 
+            <div className="Salary"> 
                 <h4 className="Expenses__title">salary</h4>
                 
-                <form action="" id="salaryInputForm">
+                <form action="" id="salaryInputForm" ref={props.salaryInputRef}>
                     <label htmlFor="salaryAmount" className="visuallyHidden">Input Salary Amount:</label>
                     <span>$</span>
                     <input 
                         type="number" 
                         onChange={props.salaryInput}
-                        className="Date__description" 
+                        className="Salary__description" 
                         name="salaryAmount" 
                         id="salaryAmount" 
                         placeholder="Salary Amount (e.g. 1000)"
@@ -36,6 +37,8 @@ const DisplayPayday = (props) => {
                         <i className="far fa-check-circle"></i>
                     </button> 
                 </form>
+
+                <DisplayPaydayList />
             </div>
         </div>
     )
