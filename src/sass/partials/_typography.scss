@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    @include fontStyle(1.6rem, 1.6rem, var(--color-grey-dark-2), $base-font, 400);
+    @include fontStyle(1.6rem, 2.5rem, var(--color-grey-dark-2), $base-font, 400);
     // font-family: $base-font;
     // font-weight: 400;
     // line-height: 1.6;

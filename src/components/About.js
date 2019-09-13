@@ -8,7 +8,13 @@ class About extends Component {
         return ( 
         <section className="About Container">
             {/* TODO: Style is thang v (button) */}
-            <Link to="/">Home</Link>
+            <nav>
+                <ul>
+                    <li>
+                        <Link to="/">Home</Link>
+                    </li>
+                </ul>
+            </nav>
             <h2 className="heading-primary">When it comes to your money, 
                 <span className="heading-primary-span">don't budge.</span>
             </h2>

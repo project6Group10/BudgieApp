@@ -4,7 +4,7 @@ class Footer extends Component {
     state = {  }
     render() { 
         return ( 
-            <footer className="Footer">
+            <a className="Footer">
                <ul className="Footer__social-media">
                     <li className="Footer__social-media-item">
                         <a className="Footer__social-media-link" href="#twitter">
@@ -22,7 +22,7 @@ class Footer extends Component {
                         </a>
                     </li>
                 </ul>
-            </footer>
+            </a>
          );
     }
 }
