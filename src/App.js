@@ -9,11 +9,8 @@ import Header from './components/Header';
 import About from './components/About';
 import Footer from './components/Footer';
 import CalcExpenseTotal from './components/CalcExpenseTotal';
-<<<<<<< HEAD
 import Test from './components/Test';
-=======
 // import CalcPayday from './components/CalcPayday';
->>>>>>> cb6de509c4b364dffae92d78475bb083aea0aa34
 
 class App extends Component {
   state = {  }
