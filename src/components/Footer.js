@@ -17,9 +17,9 @@ class Footer extends Component {
                         </a>
                     </li>
                     <li className="Footer__social-media-item">
-                        <i className="fab fa-twitter">
-                            <a className="Footer__social-media-link" href="#twitter"></a>
-                        </i>
+                        <a className="Footer__social-media-link" href="#twitter">
+                            <i className="fab fa-twitter"></i>
+                        </a>
                     </li>
                 </ul>
             </footer>
