@@ -43,7 +43,7 @@ class CalcPayday extends Component {
     
     render() {
         return (
-            <CalcExpenseTotal days={this.state.daysDifference}/>
+            <CalcDailyBudget days={this.state.daysDifference}/>
         )
     }
 }
