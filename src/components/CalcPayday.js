@@ -13,14 +13,14 @@ class CalcPayday extends Component {
     }
 
     getTodaysDate = () => {
-        const today = new Date();
-        const date = ('0' + today.getFullYear()).slice(-2) + `-` + ('0' + (today.getMonth() + 1)).slice(-2) + `-` + ('0' + today.getDate()).slice(-2);
+        const date = new Date().toJSON().slice(0, 10).replace(/-/g, '/');
         this.setState({
             currentDate: date,
         })
     }
 
     componentDidMount() {
+        this.getTodaysDate();
         const dateRef = firebase.database().ref('salaryItems').orderByChild('salaryDate')
         dateRef.on('value', date => {
             const dateArray = date.val();
@@ -30,6 +30,14 @@ class CalcPayday extends Component {
                 })
             }
         })
+    }
+
+    componentDidUpdate() {
+        let date1 = new Date(this.state.currentDate.toString());
+        let date2 = new Date(this.state.nextPayday.toString()); 
+        const Difference_In_Time = date2.getTime() - date1.getTime();
+        const Difference_In_Days = Math.floor(Difference_In_Time / (1000 * 3600 * 24));
+        console.log(Difference_In_Days);
     }
     
     render() {
