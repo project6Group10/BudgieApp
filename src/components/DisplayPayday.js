@@ -15,7 +15,7 @@ const DisplayPayday = (props) => {
                         className="Date__description" 
                         name="salaryAmount" 
                         id="salaryAmount" 
-                        placeholder="Salary Amount (ie. 1000)"
+                        placeholder="Salary Amount (e.g. 1000)"
                     />
 
                     <label htmlFor="salary" className="visuallyHidden">Input Salary Date:</label>

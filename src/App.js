@@ -3,7 +3,7 @@ import Budget from './BudgetCalc';
 import './sass/App.scss';
 import CalcDailyBudget from './components/CalcDailyBudget';
 import DisplayExpenses from './components/DisplayExpenses';
-import DisplayPayday from './components/DisplayPayday';
+import InputPayday from './components/InputPayday';
 import Header from './components/Header';
 import About from './components/About';
 import Footer from './components/Footer';
@@ -17,7 +17,7 @@ class App extends Component {
           <About/>
            <CalcDailyBudget />
            <div className="Container">
-              <DisplayPayday />
+              <InputPayday />
               <DisplayExpenses />
            </div>
            <Footer/>
