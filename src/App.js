@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './sass/App.scss';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 // FIXME: Need to get rid of Budget.scss and split them into partials
 import './sass/Budget.scss';
@@ -8,24 +9,22 @@ import InputPayday from './components/InputPayday';
 import Header from './components/Header';
 import About from './components/About';
 import Footer from './components/Footer';
-import CalcExpenseTotal from './components/CalcExpenseTotal';
 import Test from './components/Test';
+import Budgie from './components/Budgie';
 // import CalcPayday from './components/CalcPayday';
 
 class App extends Component {
   state = {  }
   render() { 
     return ( 
+      <Router>
         <div className="App">
-            <Header/>
-            <About/>
-            <CalcExpenseTotal />
-            <div className="Container">
-                <InputPayday />
-                <DisplayExpenses />
-            </div>
+            <Route exact path="/" component={Header} />
+            <Route path="/About" component={About} />
+            <Route exact path="/Budgie" component={Budgie} />
             <Footer/>
         </div>
+      </Router>
      );
   }
 }
