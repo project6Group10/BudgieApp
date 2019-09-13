@@ -8,22 +8,21 @@ import DisplayPayday from './DisplayPayday';
 
 
 class InputPayday extends Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
         this.state = { 
             currentSalary: 0,
             salaryInput: 0,
             salaryDateInput: '',
         }
 
-        this.salaryRef = firebase.database();
+        this.salaryRef = firebase.database().ref().child('salaryItems');
     }
 
     componentDidMount() {
-        this.salaryRef.ref().on('value', (data) => {
+        this.salaryRef.on('value', (data) => {
             const response = data.val();
             console.log(response);
-
             this.setState({
                 currentSalary: response.salaryAmount
             })
@@ -31,15 +30,14 @@ class InputPayday extends Component {
     }
 
     handleSalaryInput = (event) => {
+        console.log(this.state.salaryInput);        
         this.setState({
             salaryInput: event.target.value
         })
     }
 
     handleSalaryDateInput = (event) => {
-
-        // TODO: Add error handling past dates
-        
+        // TODO: Add error handling past dates    
         this.setState({
             salaryDateInput: event.target.value
         })
@@ -47,12 +45,14 @@ class InputPayday extends Component {
 
     handleSalarySubmit = (event) => {
         event.preventDefault();
+        console.log(this.state.salaryInput);
 
         if (this.state.salaryInput > 0 && this.state.salaryDateInput) {
+            this.salaryRef.push({
+                salaryAmount: this.state.salaryInput,
+                salaryDate: this.state.salaryDateInput,
+            });
 
-            this.salaryRef.ref("salaryAmount").set(this.state.salaryInput);
-            this.salaryRef.ref("payDate").set(this.state.salaryDateInput);
-            
             this.setState({
                 salaryInput: "",
                 salaryDateInput: 0,
@@ -74,7 +74,7 @@ class InputPayday extends Component {
                 dateInput={this.handleSalaryDateInput}
                 buttonClick={this.handleSalarySubmit}
             />
-         );
+        );
     }
 }
  
