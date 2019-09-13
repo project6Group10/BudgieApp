@@ -1,13 +1,18 @@
 /////////////////////////////////
 //BUTTON STYLES
 /////////////////////////////////
+button {
+    // outline: 0;
+    border: none;
+}
+
 .btn-link {
     text-decoration:none;
 }
 
 .header-button {
     background: transparent;
-    position: absolute;
+    // position: absolute;
     bottom: 7rem;
     left: 10rem;  
     box-shadow: 0rem 1rem 2rem rgba(var(--color-grey-dark-1), .5);
@@ -49,7 +54,7 @@
     }
 
     .line {
-        position: absolute;
+        // position: absolute;
         background: var(--color-primary);
     
         &.-right,

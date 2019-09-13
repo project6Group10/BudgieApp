@@ -5,7 +5,23 @@ class Footer extends Component {
     render() { 
         return ( 
             <footer className="Footer">
-               <p className="Footer__paragraph">Made at Juno</p>
+               <ul className="Footer__social-media">
+                    <li className="Footer__social-media-item">
+                        <a className="Footer__social-media-link" href="#twitter">
+                            <i className="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li className="Footer__social-media-item">
+                        <a className="Footer__social-media-link" href="#facebook">
+                            <i className="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li className="Footer__social-media-item">
+                        <i className="fab fa-twitter">
+                            <a className="Footer__social-media-link" href="#twitter"></a>
+                        </i>
+                    </li>
+                </ul>
             </footer>
          );
     }
