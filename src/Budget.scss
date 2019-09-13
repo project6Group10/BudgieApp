@@ -274,6 +274,7 @@ flex: 1;
 &__income--value,
 &__expenses--value {
     letter-spacing: 1px; 
+    color: var(--color-primary-dark);
 }
 
 &__income--percentage,

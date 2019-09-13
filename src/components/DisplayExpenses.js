@@ -9,7 +9,7 @@ const DisplayExpenses = () => {
             <div className="Expenses">
                 <InputExpenses />
                 <DisplayExpenseList />
-                <CalcExpenseTotal />
+        
             </div>
         </div> 
     )

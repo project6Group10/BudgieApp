@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import firebase from '../firebase'
+import firebase from '../firebase';
+import CalcDailyBudget from './CalcDailyBudget';
+
 class CalcExpenseTotal extends Component {
     constructor() {
         super();
@@ -21,7 +23,7 @@ class CalcExpenseTotal extends Component {
             this.setState({
                 expenseTotal: total,
             })
-            
+            console.log(this.state.expenseTotal)
         })
         
     }
@@ -29,9 +31,7 @@ class CalcExpenseTotal extends Component {
     render() {
         return (
             <div>
-                <p>Total</p>
-                <span>Ammount</span>
-
+              <CalcDailyBudget total={this.state.expenseTotal}/>
             </div>
         )
     }
