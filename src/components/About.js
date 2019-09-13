@@ -6,17 +6,19 @@ class About extends Component {
 
     render() { 
         return ( 
-        <section className="section-about Container">
+        <section className="About Container">
             {/* TODO: Style is thang v (button) */}
             <Link to="/">Home</Link>
-            <h2 className="heading-secondary">When it comes to your money, don't budge.</h2>
+            <h2 className="heading-primary">When it comes to your money, 
+                <span className="heading-primary-span">don't budge.</span>
+            </h2>
             <div className="row">
             <div className="col-1-of-2">
-                <h3 className="heading-teretiary">who we are</h3>
+                <h3 className="heading-secondary">who we are</h3>
                 <p className="paragraph">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac eros eget purus molestie rhoncus eu quis mi. Proin faucibus ullamcorper interdum. Donec mattis pulvinar mauris, eu euismod purus placerat vitae. Curabitur eget augue sed dui aliquam consectetur. Vivamus eu elit ac nisl imperdiet pharetra. Fusce lacinia laoreet nunc, ut blandit dui vehicula
                 </p>
-                <Link to="/Budgie" className="btn-text">Start &#x02193;</Link>
+                <Link to="/Budgie" className="btn-text">Start</Link>
             </div>
             <div className="col-2-of-2">
                 <div className="composition">

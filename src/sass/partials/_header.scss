@@ -15,6 +15,34 @@
         // height: 90%;
         @include flex(column, space-between);
     }
+
+    .heading-primary {
+        font-family: 'Sirin Stencil', cursive;
+        color: var(--color-white);
+        text-transform: uppercase;
+        width: 50%;
+        text-align: center;
+        font-size: 3.7rem;
+        border-top: 2px dotted var(--color-primary);
+        margin-bottom: 25%;
+    
+        &__main {
+            display: block;
+            letter-spacing: 1rem;
+            font-weight: 400;
+            animation: slide-in-left 1.3s ease-out;
+            backface-visibility: hidden;
+        }
+    
+        &__sub {
+            display: block;
+            letter-spacing: 0.5rem;
+            font-size: 2.5rem;
+            line-height: 2.7rem;
+            font-weight: 700;
+            animation: slide-in-bottom 1s ease-out;
+        }
+    }
     
     &__social-media {
         position: fixed;
@@ -52,34 +80,6 @@
     border: 1px solid red;
     width: 5rem;
     height: auto;
-}
-
-.heading-primary {
-    font-family: 'Sirin Stencil', cursive;
-    color: var(--color-white);
-    text-transform: uppercase;
-    width: 50%;
-    text-align: center;
-    font-size: 3.7rem;
-    border-top: 2px dotted var(--color-primary);
-    margin-bottom: 25%;
-
-    &__main {
-        display: block;
-        letter-spacing: 1rem;
-        font-weight: 400;
-        animation: slide-in-left 1.3s ease-out;
-        backface-visibility: hidden;
-    }
-
-    &__sub {
-        display: block;
-        letter-spacing: 0.5rem;
-        font-size: 2.5rem;
-        line-height: 2.7rem;
-        font-weight: 700;
-        animation: slide-in-bottom 1s ease-out;
-    }
 }
 
 ////////////////////  ANIMATIONS IN THE HEADER
