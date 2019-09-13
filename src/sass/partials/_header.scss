@@ -1,0 +1,123 @@
+/////////////////////////////////
+//Header STYLES
+/////////////////////////////////
+.header {
+    height: 95vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(../../cover.jpeg);
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+    clip-path: polygon(0 6%,100% 0, 100% 100%, 0 100% );
+    position: relative;
+    margin-bottom: 14rem;
+    
+    &__social-media {
+        position: fixed;
+        top: 20%;
+        right: 5%;
+        
+        &-item {
+            list-style-type: none;
+            font-size: 3rem;
+        }
+
+        &-link {
+        }
+    }
+}
+
+.fab {
+    color: var(--color-primary);
+}
+
+.logo-box {
+    position: absolute;
+    top: 10%;
+    left: 2%;
+}
+
+.logo {
+    width: 5rem;
+        height: auto;
+    }
+
+    .heading-primary {
+    font-family: 'Sirin Stencil', cursive;
+    color: var(--color-white);
+    text-transform: uppercase;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    text-align: center;
+    font-size: 7rem;
+    border-top: 2px dotted var(--color-primary);
+
+    &__main {
+        display: block;
+        letter-spacing: 1rem;
+        font-weight: 400;
+        animation: slide-in-left 1.3s ease-out;
+        backface-visibility: hidden;
+    }
+
+    &__sub {
+        display: block;
+        letter-spacing: 0.5rem;
+        font-size: 2.5rem;
+        font-weight: 700;
+        animation: slide-in-bottom 1s ease-out;
+    }
+}
+
+////////////////////  ANIMATIONS IN THE HEADER
+@-webkit-keyframes slide-in-bottom {
+    0% {
+        -webkit-transform: translateY(1000px);
+        transform: translateY(1000px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slide-in-bottom {
+    0% {
+        -webkit-transform: translateY(1000px);
+        transform: translateY(1000px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes slide-in-left {
+    0% {
+        -webkit-transform: translateX(-1000px);
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+    }
+    @keyframes slide-in-left {
+    0% {
+        -webkit-transform: translateX(-1000px);
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

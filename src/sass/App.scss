@@ -1,4 +1,11 @@
 @import './partials/setup';
+@import './partials/variablesAndMixins';
+@import './partials/typography';
+@import './partials/header';
+@import './partials/about';
+@import './partials/budgie';
+@import './partials/buttons';
+@import './partials/footer';
 
 .App {
   text-align: center;

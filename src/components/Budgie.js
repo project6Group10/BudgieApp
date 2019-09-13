@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import '../sass/App.scss';
 import { Link } from 'react-router-dom';
-
-// FIXME: Need to get rid of Budget.scss and split them into partials
-import '../sass/Budget.scss';
 import DisplayExpenses from './DisplayExpenses';
 import InputPayday from './InputPayday';
 import Footer from './Footer';
