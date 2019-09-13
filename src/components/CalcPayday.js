@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import firebase from '../firebase';
 import CalcDailyBudget from './CalcDailyBudget';
-import CalcExpenseTotal from './CalcExpenseTotal';
+
 
 class CalcPayday extends Component {
     constructor() {
@@ -9,7 +9,7 @@ class CalcPayday extends Component {
         this.state = {
             currentDate: "",
             nextPayday: "",
-            daysDifference: "",
+            daysDifference: 0,
         }
     }
 
@@ -28,17 +28,17 @@ class CalcPayday extends Component {
             for (let key in dateArray) {
                 this.setState({
                     nextPayday: dateArray[key].salaryDate
-                })
-            }
+                }, () => {
+                    let date1 = new Date(this.state.currentDate.toString());
+                    let date2 = new Date(this.state.nextPayday.toString()); 
+                    const Difference_In_Time = date2.getTime() - date1.getTime();
+                    const Difference_In_Days = Math.floor(Difference_In_Time / (1000 * 3600 * 24));
+                    this.setState({
+                    daysDifference: Difference_In_Days,
+                    })}
+        
+            )}
         })
-    }
-
-    componentDidUpdate() {
-        let date1 = new Date(this.state.currentDate.toString());
-        let date2 = new Date(this.state.nextPayday.toString()); 
-        const Difference_In_Time = date2.getTime() - date1.getTime();
-        const Difference_In_Days = Math.floor(Difference_In_Time / (1000 * 3600 * 24));
-
     }
     
     render() {

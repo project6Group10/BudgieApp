@@ -18,6 +18,7 @@ class App extends Component {
         <div className="App">
             <Header/>
             <About/>
+            <CalcPayday />
             <CalcExpenseTotal />
             <div className="Container">
                 <InputPayday />
