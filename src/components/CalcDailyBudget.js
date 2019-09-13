@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CalcDailyBudget = () => {
+const CalcDailyBudget = (props) => {
     return (
         <div>
             <div className="Budget ">
@@ -18,7 +18,7 @@ const CalcDailyBudget = () => {
                     
                     <div className="Budget__expenses">
                         <div className="Budget__expenses--text">Expenses</div>
-                            <div className="Budget__expenses--value">- 1,954.36</div>
+                            <div className="Budget__expenses--value">{props.total}</div>
                             <div className="Budget__expenses--percentage">45%</div>
                        </div>
             </div>
