@@ -9,7 +9,8 @@ import Header from './components/Header';
 import About from './components/About';
 import Footer from './components/Footer';
 import CalcExpenseTotal from './components/CalcExpenseTotal';
-// import CalcPayday from './components/CalcPayday';
+import CalcPayday from './components/CalcPayday';
+
 
 class App extends Component {
   state = {  }
@@ -24,6 +25,7 @@ class App extends Component {
                 <DisplayExpenses />
             </div>
             <Footer/>
+            <CalcPayday />
         </div>
      );
   }
