@@ -7,20 +7,22 @@ import InputPayday from './components/InputPayday';
 import Header from './components/Header';
 import About from './components/About';
 import Footer from './components/Footer';
+import CalcPayday from './components/CalcPayday';
 
 class App extends Component {
   state = {  }
   render() { 
     return ( 
       <div className="App">
-          <Header/>
-          <About/>
+          <Header />
+          <About />
            <CalcDailyBudget />
            <div className="Container">
               <InputPayday />
               <DisplayExpenses />
            </div>
-           <Footer/>
+           <Footer />
+           <CalcPayday />
       </div>
      );
   }

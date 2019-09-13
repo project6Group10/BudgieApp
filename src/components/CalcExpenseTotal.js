@@ -21,7 +21,6 @@ class CalcExpenseTotal extends Component {
             this.setState({
                 expenseTotal: total,
             })
-            
         })
         
     }
