@@ -3,7 +3,7 @@ import firebase from '../firebase';
 
 
 const DisplayExpenseItems = (props) => {
-    const uid = props.uid
+    // const uid = props.uid
     const removeItem = () => {
         firebase.database().ref().child('expenseItems').child(props.uid).remove()
     }

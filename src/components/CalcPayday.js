@@ -9,7 +9,7 @@ class CalcPayday extends Component {
             nextPayday: "",
             daysDifference: "",
         }
-        const dateRef = firebase.database().ref().child('salaryItems').orderByChild('salaryAmount');
+        const dateRef = firebase.database().ref().child('salaryItems').orderByChild('salaryDate');
     }
 
     getTodaysDate = () => {
@@ -23,9 +23,8 @@ class CalcPayday extends Component {
     componentDidMount() {
         const dateRef = firebase.database().ref().child('salaryItems')
         this.getTodaysDate();
-        this.setState({
-            nextPayday: dateRef
-        })
+        console.log(Object.keys(this.dateRef));
+        
         
     }
     

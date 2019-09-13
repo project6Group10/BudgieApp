@@ -3,13 +3,13 @@ import './sass/App.scss';
 
 // FIXME: Need to get rid of Budget.scss and split them into partials
 import './sass/Budget.scss';
-import CalcDailyBudget from './components/CalcDailyBudget';
 import DisplayExpenses from './components/DisplayExpenses';
 import InputPayday from './components/InputPayday';
 import Header from './components/Header';
 import About from './components/About';
 import Footer from './components/Footer';
 import CalcExpenseTotal from './components/CalcExpenseTotal';
+// import CalcPayday from './components/CalcPayday';
 
 class App extends Component {
   state = {  }
@@ -18,7 +18,7 @@ class App extends Component {
         <div className="App">
             <Header/>
             <About/>
-            <CalcDailyBudget />
+            <CalcExpenseTotal />
             <div className="Container">
                 <InputPayday />
                 <DisplayExpenses />
