@@ -5,7 +5,7 @@ const CalcDailyBudget = (props) => {
         <div>
             <div className="Budget ">
                 <div className="Budget__title">
-                    Available Budget in <span className="Budget__title--month">%Day%</span>:
+                    Available Budget in <span className="Budget__title--month">{props.days}</span>:
                 </div>
                 
                <div className="Budget__value">+ 2,345.64</div>
