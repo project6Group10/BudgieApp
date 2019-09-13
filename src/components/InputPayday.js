@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import firebase from '../firebase';
+import DisplayPayday from './DisplayPayday';
 
 // Take user input for Salary and handle it
 // Take user input for Date and handle it
@@ -68,36 +69,11 @@ class InputPayday extends Component {
     
     render() { 
         return ( 
-            <form action="" id="salaryInputForm">
-                <label htmlFor="salaryAmount" className="visuallyHidden">Input Salary Amount:</label>
-                <span>$</span>
-                <input 
-                    type="number" 
-                    onChange={this.handleSalaryInput}
-                    className="Date__description" 
-                    name="salaryAmount" 
-                    id="salaryAmount" 
-                    placeholder="Salary Amount (ie. 1000)"
-                />
-
-                <label htmlFor="salary" className="visuallyHidden">Input Salary Date:</label>
-                <input 
-                    type="date" 
-                    onChange={this.handleSalaryDateInput}
-                    className="date__input" 
-                    name="salaryDate" 
-                    id="salaryDate"
-                />
-
-                <button 
-                    onClick={this.handleSalarySubmit} 
-                    className="Expenses__btn"
-                    aria-label="Submit payday."
-                    aria-hidden="true"
-                >
-                    <i className="far fa-check-circle"></i>
-                </button> 
-            </form>
+            <DisplayPayday 
+                salaryInput={this.handleSalaryInput}
+                dateInput={this.handleSalaryDateInput}
+                buttonClick={this.handleSalarySubmit}
+            />
          );
     }
 }
