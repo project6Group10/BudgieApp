@@ -8,7 +8,6 @@ import InputPayday from './components/InputPayday';
 import Header from './components/Header';
 import About from './components/About';
 import Footer from './components/Footer';
-import CalcExpenseTotal from './components/CalcExpenseTotal';
 import CalcDailyBudget from './components/CalcDailyBudget';
 
 class App extends Component {
