@@ -57,9 +57,7 @@ class CalcDailyBudget extends Component {
                     this.setState({
                         daysDifference: Difference_In_Days,
                     })
-                }
-
-                )
+                })
             }
         })
 
