@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import React, { Component } from 'react';
-import Logo from '../logo.png';
+import BudgieLogo from '../assets/budgie.png';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 
