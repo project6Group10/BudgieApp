@@ -11,16 +11,15 @@ class Header extends Component {
                 <nav className="navigation">
                     <ul className="navigation__list">
                         <li className="navigation__item">
-                            <Link to="/" className="btn-link logo-box">
+                            <Link to="/" className="btn-logo">
                                 <img src={BudgieLogo} className="logo" alt="Budgie Birb Logo."/>
                             </Link>
                         </li>
-                        <li className="navigation__item header__button">
-                            <Link to="/About" className="btn-link text">
-                                <span className="text">About</span> <span className="line -right"></span>
-                                <span className="line -top"></span> <span className="line -left"></span>
-                                <span className="line -bottom"></span>
+                        <li className="navigation__item">
+                            <Link to="/About" className="btn-about">
+                                about
                             </Link>
+                            
                         </li>
                     </ul>
                 </nav>
@@ -40,10 +39,8 @@ class Header extends Component {
                     </section>
                     <div className="header__buttonContainer">
                         <button className="header__button">
-                            <Link to="/Budgie" className="btn-link">
-                                <span className="text">Start</span> <span className="line -right"></span>
-                                <span className="line -top"></span> <span className="line -left"></span>
-                                <span className="line -bottom"></span>
+                            <Link to="/Budgie" className="btn-start">
+                                start
                             </Link>
                         </button>
                     </div>

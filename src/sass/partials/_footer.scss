@@ -14,7 +14,13 @@
     }
 
     &__social-media {
-        width: 8%;
         @include flex(row, space-between, center);
+
+        &-item {
+            margin: 0 2rem;
+
+        }
+        
+       
     }
 }
