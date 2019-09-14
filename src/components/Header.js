@@ -37,13 +37,9 @@ class Header extends Component {
                         <h1 className="heading-primary__main">budgie</h1>
                         <h2 className="heading-primary__sub ">Your daily budget</h2>
                     </section>
-                    <div className="header__buttonContainer">
-                        <button className="header__button">
                             <Link to="/Budgie" className="btn-start">
                                 start
                             </Link>
-                        </button>
-                    </div>
                 </main>
             </header>
         );

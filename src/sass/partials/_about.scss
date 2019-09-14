@@ -5,11 +5,8 @@
     height: 95vh;
     @include flex(column, flex-start);
 
-    nav {
-        width: 100%;
-        height: 5%;
-        @include flex(row, flex-end);
-        margin-top: 3%;
+    .Container {
+        height: 90%;
     }
 }
 
@@ -24,6 +21,9 @@
 
     &-span {
         display: block;
+    }
+    @media only screen and (max-width: $bp-small) {
+        margin: 6rem 0;
     }
 }
 
@@ -41,17 +41,28 @@
         background-color: var(--color-primary);
         margin-top: .6rem;
     }
+
 }
 
 .composition {
     position: relative;
-    background: var(--color-white);
+    background-color: var(--color-white);
+    background-color: red;
+    @media only screen and (max-width: $bp-medium) {
+     width: 50%;
+    }
+ 
+    
 
     &__photo {
         position: relative;
         width: 100%;
         margin-top: 1.5rem;
         box-shadow: 0.7rem 0.7rem 0 rgba($tertiary, .6);
+        @media only screen and (max-width: $bp-medium) {
+            width: 50%;
+            margin: 3rem auto;
+          }
     }
 
     &::before{
@@ -63,27 +74,43 @@
         top: -1rem;
         left: -10px;
         z-index: -1;
+        @media only screen and (max-width: $bp-medium) {
+           display: none;
+        }
+       
     }
 }
 
 .row {
     @include flex(row, space-between);
     margin-top: 5%;
+    @media only screen and (max-width: $bp-medium) {
+        @include flex(column, space-between);
+    }
 }
 
 .paragraph {
+    font-size: 1.6rem;
+    line-height: 2.5rem;
     width: 70%;
     text-align: left;
+    @media only screen and (max-width: $bp-medium) {
+        text-align: center;
+      }
 }
-
 .col-1-of-2 {
     flex:  0 0 70%;
-    @include flex(column, flex-start, space-between);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    @media only screen and (max-width: $bp-medium) {
+        flex: 0 0 100%;
+        align-items: center
+    }
 }
-
 .col-2-of-2 {
     flex: 1;
+    @media only screen and (max-width: $bp-medium) {
+        flex: 0;
+    }
 }
