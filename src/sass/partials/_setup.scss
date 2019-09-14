@@ -19,8 +19,10 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
   margin: 0 auto;
 }
 
+// FIXME: need to be a classname instead
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
+

@@ -10,7 +10,7 @@ button {
     text-decoration:none;
 }
 
-.header-button {
+.header__button {
     background: transparent;
     // position: absolute;
     bottom: 7rem;
@@ -29,12 +29,12 @@ button {
         letter-spacing: 0.07em;
         text-transform: uppercase;
 
-        .text {
-            padding: 0 0.3em;
-            transform: translate3d(0,$pad,0);
-            display: block;
-            transition: transform 0.4s cubic-bezier(.2,0,0,1) 0.4s;
-        }
+        // .text {
+        //     padding: 0 0.3em;
+        //     transform: translate3d(0,$pad,0);
+        //     display: block;
+        //     transition: transform 0.4s cubic-bezier(.2,0,0,1) 0.4s;
+        // }
 
         &:after {
             position: absolute;

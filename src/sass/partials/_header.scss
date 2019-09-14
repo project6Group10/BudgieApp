@@ -9,7 +9,7 @@
     background-attachment: fixed;
     // clip-path: polygon(0 6%,100% 0, 100% 100%, 0 100% );
     // position: relative;
-    @include flex(column, flex-end);
+    @include flex(column, space-between);
 
     .Container {
         // height: 90%;
@@ -22,8 +22,9 @@
         text-transform: uppercase;
         width: 50%;
         text-align: center;
-        font-size: 3.7rem;
-        border-top: 2px dotted var(--color-primary);
+        font-size: 6rem;
+        // text-shadow: 5px 5px var(--color-primary);
+        // border-top: 5px solid var(--color-primary);
         margin-bottom: 25%;
     
         &__main {
@@ -43,42 +44,35 @@
             animation: slide-in-bottom 1s ease-out;
         }
     }
-    
-    &__social-media {
-        position: fixed;
-        top: 20%;
-        right: 5%;
-        
-        &-item {
-            list-style-type: none;
-            font-size: 3rem;
-            line-height: 4.5rem;
-        }
 
-        &-link {
-        }
+    .navigation {
+        width: 100%;
+        // padd-top: 2%;
+        // margin-left: 2%;
+        // margin-right: 5%;
+        padding: 3% 10% 0 5%;
+    }
+
+    .navigation__list {
+        width: 100%;
+        @include flex(row, space-between);
     }
 
     &__buttonContainer {
-        width: 90%;
-        @include flex(row, space-between, center);
+        width: 50%;
+        @include flex(row);
         margin-bottom: 10%;
     }
+
+    
 }
 
 .fab {
     color: var(--color-primary);
 }
 
-.logo-box {
-    // position: absolute;
-    // top: 10%;
-    // left: 2%;
-}
-
 .logo {
-    border: 1px solid red;
-    width: 5rem;
+    width: 7rem;
     height: auto;
 }
 
