@@ -10,7 +10,7 @@ class Budgie extends Component {
     state = {  }
     render() { 
         return ( 
-            <section className="Container">
+            <section className="budgie">
                 <nav className="navigation">
                     <ul className="navigation__list">
                         <li className="navigation__item">
@@ -25,14 +25,17 @@ class Budgie extends Component {
                         </li>
                     </ul>
                 </nav>
-                <section>
-                    {/*<CalcExpenseTotal />*/}
-                    <CalcDailyBudget />
-                </section>
+                <header className="hero">
+                    <div className="Container">
+                      <CalcDailyBudget />
+                    </div>
+                </header>
+                <main className="Container">
                 <section className="flex">
                     <InputPayday />
                     <DisplayExpenses />
                 </section>
+                </main>
             </section>
         );
     }
