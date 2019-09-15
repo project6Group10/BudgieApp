@@ -10,7 +10,7 @@
 
     .Container {
         height: 85%;
-        @include flex(column, flex-start);
+        @include flex(column, space-between);
         padding-bottom: 10%;
     }
 
