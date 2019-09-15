@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './sass/App.scss';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import Header from './components/Header';
+import Home from './components/Home';
 import About from './components/About';
 import Footer from './components/Footer';
 // import Test from './components/Test';
@@ -13,7 +13,7 @@ class App extends Component {
     return ( 
       <Router>
         <div className="App">
-            <Route exact path="/" component={Header} />
+            <Route exact path="/" component={Home} />
             <Route path="/About" component={About} />
             <Route exact path="/Budgie" component={Budgie} />
             <Footer/>

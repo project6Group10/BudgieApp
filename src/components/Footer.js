@@ -5,7 +5,7 @@ class Footer extends Component {
     render() { 
         return ( 
             <a className="Footer">
-               <ul className="Footer__social-media">
+                <ul className="Footer__social-media">
                     <li className="Footer__social-media-item">
                         <a className="Footer__social-media-link" href="#twitter">
                             <i className="fab fa-instagram"></i>
@@ -23,7 +23,7 @@ class Footer extends Component {
                     </li>
                 </ul>
             </a>
-         );
+        );
     }
 }
  
