@@ -1,16 +1,13 @@
+/* eslint-disable jsx-a11y/anchor-has-content */
 import React, { Component } from 'react';
-import '../sass/App.scss';
-import { Link } from 'react-router-dom';
 import BudgieLogo from '../assets/budgie.png';
-import CalcDailyBudget from './CalcDailyBudget';
-import InputPayday from './InputPayday';
-import DisplayExpenses from './DisplayExpenses';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
-class Budgie extends Component {
-    state = {  }
+
+class Home extends Component {
     render() { 
         return ( 
-            <section className="Container">
+            <div className="home">
                 <nav className="navigation">
                     <ul className="navigation__list">
                         <li className="navigation__item">
@@ -25,17 +22,19 @@ class Budgie extends Component {
                         </li>
                     </ul>
                 </nav>
-                <section>
-                    {/*<CalcExpenseTotal />*/}
-                    <CalcDailyBudget />
-                </section>
-                <section className="flex">
-                    <InputPayday />
-                    <DisplayExpenses />
-                </section>
-            </section>
+
+                <main className="Container">
+                    <section className="title">
+                        <h1 className="title__main">Budgie</h1>
+                        <h2 className="title__sub">Your daily budget</h2>
+                    </section>
+                    <Link to="/Budgie" className="btn-start">
+                        start
+                    </Link>
+                </main>
+            </div>
         );
     }
 }
 
-export default Budgie;
+export default Home;

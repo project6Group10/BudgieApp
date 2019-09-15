@@ -4,16 +4,12 @@ html {
     @media only screen and (max-width: $bp-large) {
         font-size: 55%;
     }
-   
+
     @media only screen and (max-width:$bp-medium ) {
         font-size: 45%;
     }
 }
 
 body {
-    @include fontStyle(1.6rem, 2.5rem, var(--color-grey-dark-2), $base-font, 400);
-    // font-family: $base-font;
-    // font-weight: 400;
-    // line-height: 1.6;
-    // color: var(--color-grey-dark-2);
+    @include fontStyle(1.6rem, 2.5rem, var(--color-grey-dark-2), $body-font, 400);
 }

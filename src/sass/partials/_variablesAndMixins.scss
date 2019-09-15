@@ -10,7 +10,7 @@
     --color-grey-light: #e7e7e7;
 }
 
-$primary: #88c2a9;
+$primary: #42e69f;
 $secondary: #dfffec;
 $tertiary: #1f3a33;
 
@@ -24,7 +24,8 @@ $pad : 0.7rem;
 $extra : calc(#{$pad} * 1.2);
 $social-width: 20%;
 
-$base-font: 'Barlow', sans-serif;
+$heading-font: 'Sirin Stencil', cursive;
+$body-font: 'Barlow', sans-serif;
 
 // ====================
 // Mixins

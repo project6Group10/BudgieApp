@@ -1,5 +1,5 @@
 /////////////////////////////////
-//FOOTER STYLES
+// Footer Page Styles
 /////////////////////////////////
 .Footer {
     @include flex(row);
@@ -7,17 +7,20 @@
     color: var(--color-white);
     height: 5vh;
     width: 100%;
-    position: absolute;
-    left: 0;
-    bottom: 0;
+
     &__paragraph {
         font-size: 1.5rem;
     }
+
     &__social-media {
         @include flex(row, space-between, center);
 
         &-item {
             margin: 0 2rem;
         }
+    }
+
+    .fab {
+        color: var(--color-primary);
     }
 }
