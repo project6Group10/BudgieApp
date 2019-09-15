@@ -9,7 +9,7 @@
     flex-direction: column;
     align-items: center;
 	justify-content: center;
-	padding: 3rem 0 1.5rem 0;
+	padding: 1rem 0 1.5rem 0;
 
 	&__title {
 		font-size: 3rem;
@@ -76,9 +76,15 @@
 }
 
 .info {
-    display: flex;
+	display: flex;
 }
-
+.flex {
+	display: flex;
+	justify-content: space-between;
+	 @media only screen and (max-width:$bp-medium ) {
+        flex-direction: column;
+    }
+}
 //////////////////////////////////////////////////////////////////////////////////////
 // Expenses style 
 //////////////////////////////////////////////////////////////////////////////////////
@@ -86,8 +92,11 @@
 /***** FORM *****/
 
 .Expenses {
-	   margin-bottom: 20rem; // It may be removed ///////Attention 
-	   
+	margin-bottom: 5rem;
+	&__list {
+		overflow: scroll;
+		height: 15rem;
+	}   
     &__title {
 		color: var(--color-primary-dark);
 		letter-spacing: 2px;
