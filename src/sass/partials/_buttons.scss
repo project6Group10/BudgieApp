@@ -1,7 +1,9 @@
+/////////////////////////////////
+// General Button Styles
+/////////////////////////////////
 .btn-about,
 .btn-start,
-.btn-home,
-.btn-text {
+.btn-home {
     display: inline-block;
     color: var(--color-primary);
     font-size: 2rem;
@@ -22,18 +24,18 @@
     }
 }
 
-.btn-start {
-    padding: 3rem 7rem;
-    border-radius: 8px;
-    margin-top: 20rem;
+.home {
+    .btn-start {
+        padding: 3rem 7rem;
+        border-radius: 8px;
+        margin-top: 20rem;
+    }
 }
 
-
-
-/////////////////////////////// About section button
-
-.btn-text {
-    margin-top: 2rem;
-    padding: 1rem;
+.about {
+    .btn-start {
+        margin-top: 3rem;
+        padding: 1.5rem 3rem;
+    }
 }
 

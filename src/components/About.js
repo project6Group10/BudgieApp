@@ -36,7 +36,7 @@ class About extends Component {
                             <p className="paragraph">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac eros eget purus molestie rhoncus eu quis mi. Proin faucibus ullamcorper interdum. Donec mattis pulvinar mauris, eu euismod purus placerat vitae. Curabitur eget augue sed dui aliquam consectetur. Vivamus eu elit ac nisl imperdiet pharetra. Fusce lacinia laoreet nunc, ut blandit dui vehicula
                             </p>
-                            <Link to="/Budgie" className="btn-text">Start</Link>
+                            <Link to="/Budgie" className="btn-start">start</Link>
                         </section>
                         <section className="col-2-of-2">
                             <div className="composition">

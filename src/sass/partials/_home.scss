@@ -1,5 +1,5 @@
 /////////////////////////////////
-//Header STYLES
+// Home Page Styles
 /////////////////////////////////
 .home {
     height: 95vh;
@@ -9,16 +9,13 @@
     @include flex(column, space-between);
 
     .Container {
-        // border: 1px solid red;
         height: 85%;
         @include flex(column, flex-start);
         padding-bottom: 10%;
     }
 
     .title {
-        // border: 1px solid blue;
         width: 50%;
-        // height: 50%;
         @include flex(column, space-between);
         text-transform: uppercase;
         text-align: center;
@@ -29,7 +26,6 @@
         }
 
         &__main {
-            // border: 1px solid red;
             margin: 3rem 0 2rem;
             @include fontStyle(9rem, 10rem, var(--color-white), $heading-font, 400);
             letter-spacing: 1rem;
@@ -37,7 +33,6 @@
         }
 
         &__sub {
-            // border: 1px solid red;
             @include fontStyle(2.5rem, 2.7rem, var(--color-white), $body-font, 700);
             letter-spacing: 0.5rem;
             animation: slide-in-bottom 1s ease-out;
@@ -45,7 +40,9 @@
     }
 }
 
-////////////////////  ANIMATIONS IN THE HEADER
+/////////////////////////////////
+// Home Page Animations
+/////////////////////////////////
 @-webkit-keyframes slide-in-bottom {
     0% {
         -webkit-transform: translateY(1000px);
