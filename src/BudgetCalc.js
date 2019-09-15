@@ -8,7 +8,7 @@ class Budget extends Component {
     render() { 
         return ( 
          <div className="BudgetCalc">
-            <div className="Budget ">
+            <div className="Budget">
                 <div className="Budget__title">
                     Available Budget in <span className="Budget__title--month">%Day%</span>:
                 </div>
