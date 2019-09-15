@@ -1,26 +1,27 @@
-
 .btn-about,
 .btn-start,
 .btn-home,
 .btn-text {
+    display: inline-block;
     color: var(--color-primary);
     font-size: 2rem;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 2rem;
     border: 4px solid var(--color-primary);
     border-radius: 4px;
-    display: inline-block;
     transition: all .3s;
-    @media only screen and (max-width:$bp-medium ) {
-        font-size: 1.3rem;
-        padding: 1.3rem;
+
+    // @media only screen and (max-width:$bp-medium ) {
+    //     font-size: 1.3rem;
+    //     padding: 1.3rem;
+    // }
+
+    &:hover {
+        background-color: var(--color-primary);
+        color: var(--color-white)
     }
-     &:hover {
-         background-color: var(--color-primary);
-         color: var(--color-white)
-     }
 }
+
 .btn-start {
     padding: 3rem 7rem;
     border-radius: 8px;
@@ -32,7 +33,7 @@
 /////////////////////////////// About section button
 
 .btn-text {
-  margin-top: 2rem;
-  padding: 1rem;
+    margin-top: 2rem;
+    padding: 1rem;
 }
 
