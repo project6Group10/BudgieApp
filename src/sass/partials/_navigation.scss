@@ -10,10 +10,10 @@
     }
 
     &__item {
-        width: 12rem;
+        width: 9rem;
 
-        @media only screen and (max-width:$bp-medium ) {
-            width: 9rem;
+        @media only screen and (max-width:$bp-small ) {
+            width: 7.5rem;
         }
     }
 
