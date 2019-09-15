@@ -9,7 +9,6 @@ class About extends Component {
         return ( 
             
         <section className="About ">
-            {/* TODO: Style is thang v (button) */}
             <nav className="navigation">
                 <ul className="navigation__list">
                     <li className="navigation__item">
@@ -20,8 +19,7 @@ class About extends Component {
                     <li className="navigation__item">
                         <Link to="/" className="btn-home">
                             home
-                        </Link>
-                        
+                        </Link> 
                     </li>
                 </ul>
             </nav>

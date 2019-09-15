@@ -7,20 +7,17 @@
     color: var(--color-white);
     height: 5vh;
     width: 100%;
-
+    position: absolute;
+    left: 0;
+    bottom: 0;
     &__paragraph {
         font-size: 1.5rem;
-        // margin-top: 1rem;
     }
-
     &__social-media {
         @include flex(row, space-between, center);
 
         &-item {
             margin: 0 2rem;
-
         }
-        
-       
     }
 }

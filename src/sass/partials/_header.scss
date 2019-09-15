@@ -7,16 +7,12 @@
     background-size: cover;
     background-position: bottom;
     // clip-path: polygon(0 6%,100% 0, 100% 100%, 0 100% );
-    // position: relative;
-    
     @include flex(column, space-between);
-
     .Container {
         height: 90%;
         @include flex(column, flex-start);
         padding-bottom: 10%;
     }
-
     .heading-primary {
         font-family: 'Sirin Stencil', cursive;
         color: var(--color-white);
@@ -28,10 +24,6 @@
            width: 100%;
            font-size: 3rem;
         }
-        // text-shadow: 5px 5px var(--color-primary);
-        // border-top: 5px solid var(--color-primary);
-        // margin-bottom: 25%;
-    
         &__main {
             display: block;
             letter-spacing: 1rem;
@@ -39,7 +31,6 @@
             animation: slide-in-left 1.3s ease-out;
             backface-visibility: hidden;
         }
-    
         &__sub {
             display: block;
             letter-spacing: 0.5rem;
@@ -49,12 +40,6 @@
             animation: slide-in-bottom 1s ease-out;
         }
     }
-
-  
-    // &__buttonContainer {
-    //     width: 50%;
-    //     @include flex(row);
-    // } 
 }
 .navigation {
     width: 100%;
@@ -81,8 +66,6 @@
     display: block;
     height: auto
 }
-
-
 
 ////////////////////  ANIMATIONS IN THE HEADER
 @-webkit-keyframes slide-in-bottom {
