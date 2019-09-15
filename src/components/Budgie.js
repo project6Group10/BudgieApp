@@ -15,14 +15,14 @@ class Budgie extends Component {
                 <nav className="navigation">
                     <ul className="navigation__list">
                         <li className="navigation__item">
-                            <Link to="/" className="btn-logo">
-                                <img src={BudgieLogo} className="logo" alt="Budgie Birb Logo."/>    
+                            <Link to="/" className="navigation__logo btn-logo">
+                                <img src={BudgieLogo} className="image logo" alt="Budgie Birb Logo."/>
                             </Link>
                         </li>
-                        <li className="navigation__item">
-                            <Link to="/About" className="btn-about">
-                                about
-                            </Link> 
+                        <li className="navigation__item--large">
+                            <Link to="/About" className="navigation__link btn-about">
+                                About
+                            </Link>
                         </li>
                     </ul>
                 </nav>
@@ -37,3 +37,5 @@ class Budgie extends Component {
         );
     }
 }
+
+export default Budgie;
