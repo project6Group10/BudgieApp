@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import '../sass/App.scss';
 import { Link } from 'react-router-dom';
-import DisplayExpenses from './DisplayExpenses';
-import InputPayday from './InputPayday';
 import BudgieLogo from '../assets/budgie.png';
-import CalcExpenseTotal from './CalcExpenseTotal';
-// import CalcPayday from './components/CalcPayday';
+import CalcDailyBudget from './CalcDailyBudget';
+import InputPayday from './InputPayday';
+import DisplayExpenses from './DisplayExpenses';
 
 class Budgie extends Component {
     state = {  }
@@ -27,7 +26,8 @@ class Budgie extends Component {
                     </ul>
                 </nav>
                 <section>
-                    <CalcExpenseTotal />
+                    {/*<CalcExpenseTotal />*/}
+                    <CalcDailyBudget />
                 </section>
                 <section className="flex">
                     <InputPayday />
