@@ -9,7 +9,7 @@ import DisplayExpenses from './DisplayExpenses';
 class Budgie extends Component {
     state = {  }
     render() { 
-        return ( 
+        return (
             <section className="budgie">
                 <nav className="navigation">
                     <ul className="navigation__list">
