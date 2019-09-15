@@ -3,7 +3,7 @@ import '../sass/App.scss';
 import { Link } from 'react-router-dom';
 import DisplayExpenses from './DisplayExpenses';
 import InputPayday from './InputPayday';
-import Footer from './Footer';
+// import Footer from './Footer';
 import CalcExpenseTotal from './CalcExpenseTotal';
 // import CalcPayday from './components/CalcPayday';
 
@@ -12,8 +12,8 @@ class Budgie extends Component {
     render() { 
       return ( 
           <main>
-              <Link to="/">Home</Link>
-              <Link to="/About">About</Link>
+              {/* <Link to="/">Home</Link>
+              <Link to="/About">About</Link> */}
               <CalcExpenseTotal />
               <div className="Container">
                   <InputPayday />

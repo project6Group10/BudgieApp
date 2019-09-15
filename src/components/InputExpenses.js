@@ -43,7 +43,8 @@ class InputExpenses extends Component {
                 <h4 className="Expenses__title">Expenses</h4>
                 <div className="Expenses__inputs">
                     <input 
-                        type="text"                                     className="Expenses__description" 
+                        type="text"                                   
+                        className="Expenses__description" 
                         placeholder="Add Item"
                         onChange={this.handleNameChange}
                         value={this.state.expenseName}

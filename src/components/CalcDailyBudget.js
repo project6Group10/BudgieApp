@@ -1,8 +1,28 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
+import BudgieLogo from '../assets/budgie.png';
 const CalcDailyBudget = (props) => {
     return (
         <div>
+            <nav className="budget-nav">
+                <div className="budget-logo">
+                        <Link to="/">
+                            <img src={BudgieLogo} className="logo" alt="Budgie Birb Logo."/>
+                        </Link>
+                </div>
+                <ul className="budget-list">
+                    <li className="budget-item">
+                            <Link to="/" className="btn-budget">
+                                home
+                            </Link>       
+                    </li>
+                    <li className="budget-item">
+                            <Link to="/About" className="btn-about">
+                                about
+                            </Link>
+                    </li>
+                </ul>
+            </nav>
             <div className="Budget ">
                 <div className="Budget__title">
                     Available Budget in <span className="Budget__title--month">%Day%</span>:
