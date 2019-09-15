@@ -1,0 +1,26 @@
+/////////////////////////////////
+// Footer Page Styles
+/////////////////////////////////
+.Footer {
+    @include flex(row);
+    background-color: var(--color-primary-dark);
+    color: var(--color-white);
+    height: 5vh;
+    width: 100%;
+
+    &__paragraph {
+        font-size: 1.5rem;
+    }
+
+    &__social-media {
+        @include flex(row, space-between, center);
+
+        &-item {
+            margin: 0 2rem;
+        }
+    }
+
+    .fab {
+        color: var(--color-primary);
+    }
+}

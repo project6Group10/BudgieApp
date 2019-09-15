@@ -1,58 +1,6 @@
-:root {
-  --color-primary: #88c2a9;
-  --color-primary-light: #dfffec;
-  --color-primary-dark: #1f3a33;
-
- 
-  --color-white : #fff; 
-  --color-black : #000;
-  --color-grey-dark-1: #333;
-  --color-grey-dark-2: #777;
-  --color-grey-light: #e7e7e7;
-}
-
-$bp-largest: 75em;     // 1200px
-$bp-large: 68.75em;    // 1100px
-$bp-medium: 56.25em;   // 900px
-$bp-small: 46.75em;     // 784px
-
-$thick : 3px;
-$pad : 0.7rem;
-$extra : calc(#{$pad} * 1.2);
-$social-width: 20%;
-
 // font-family: 'Sirin Stencil', cursive;
 // font-family: 'Barlow', sans-serif;
 
 //
-* {
-  margin: 0;
-  padding: 0;
-}
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
 
-html {
-  box-sizing: border-box;
-  font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
-}
-
-
-body {
-  font-family: 'Barlow', sans-serif;
-  font-weight: 400;
-  line-height: 1.6;
-  color: var(--color-grey-dark-2);
-}
-
-
-.Container {
-  width: 120rem;
-  margin: 7rem auto;
-  display: flex;
-  justify-content: space-between;
-}
 

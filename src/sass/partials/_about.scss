@@ -1,0 +1,153 @@
+/////////////////////////////////
+// About Page Styles
+/////////////////////////////////
+.about {
+    @include flex(column, space-between);
+    height: 95vh;
+
+    .Container {
+        height: 90%;
+    }
+}
+
+.title {
+    text-transform: uppercase;
+    @include fontStyle(3.8rem, 4.2rem, var(--color-primary), $body-font, 700);
+    margin: 3rem 0;
+
+    &__span {
+        display: block;
+    }
+}
+
+.subtitle {
+    @include fontStyle(3rem, 4rem, var(--color-grey-dark-2), $body-font, 400);
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+
+    &::after {
+        content: "";
+        display: block;
+        height: 2px;
+        background-color: var(--color-primary);
+        margin-top: 0.6rem;
+    }
+}
+
+.row {
+    @include flex(row, space-between);
+    margin-top: 5%;
+}
+
+.col-1-of-2 {
+    @include flex(column, center, flex-start);
+    width: 70%;
+
+    .composition {
+        display: none;
+    }
+}
+
+.paragraph {
+    width: 70%;
+    text-align: left;
+}
+
+.col-2-of-2 {
+    width: 25%;
+}
+
+.composition {
+    position: relative;
+    background-color: var(--color-white);
+
+    &__photo {
+        box-shadow: 0.7rem 0.7rem 0 rgba($tertiary, .6);
+    }
+
+    &::before{
+        position: absolute;
+        content: " ";
+        background-color: var(--color-primary);
+        width: 50%;
+        height: 50%;
+        top: -1rem;
+        left: -10px;
+        z-index: -1;
+    }
+}
+
+/////////////////////////////////
+// About Page Media Queries
+/////////////////////////////////
+@media only screen and (max-width: $bp-medium) {
+    .about {
+        min-height: 1000px;
+    }
+
+    .row {
+        @include flex(column, space-between);
+    }
+
+    .col-1-of-2 {
+        width: 100%;
+        align-items: center;
+        margin-bottom: 5%;
+
+        .composition {
+            display: block;
+            width: 40%;
+            margin: 7% 0;
+        }
+    }
+
+    .paragraph {
+        width: 100%;
+        text-align: center;
+    }
+
+    .col-2-of-2 {
+        width: 30%;
+
+        .composition {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: $bp-small) {
+    .about {
+        min-height: 750px;
+    }
+
+    .title {
+        font-size: 3rem;
+        margin: 1.5rem;
+    }
+
+    .subtitle{
+        font-size: 2.5rem;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .about {
+        min-height: 600px;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .title {
+        font-size: 2.7rem;
+    }
+
+    .subtitle{
+        font-size: 2.2rem;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .title {
+        font-size: 2.4rem;
+    }
+}

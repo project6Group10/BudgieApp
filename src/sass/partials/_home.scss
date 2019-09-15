@@ -1,0 +1,95 @@
+/////////////////////////////////
+// Home Page Styles
+/////////////////////////////////
+.home {
+    height: 95vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(../../assets/cover.jpeg);
+    background-size: cover;
+    background-position: bottom;
+    @include flex(column, space-between);
+
+    .Container {
+        height: 85%;
+        @include flex(column, space-between);
+        padding-bottom: 10%;
+    }
+
+    .title {
+        width: 50%;
+        @include flex(column, space-between);
+        text-transform: uppercase;
+        text-align: center;
+
+        @media only screen and (max-width:$bp-small ) {
+            width: 100%;
+            font-size: 3rem;
+        }
+
+        &__main {
+            margin: 3rem 0 2rem;
+            @include fontStyle(9rem, 10rem, var(--color-white), $heading-font, 400);
+            letter-spacing: 1rem;
+            animation: slide-in-left 1.3s ease-out;
+        }
+
+        &__sub {
+            @include fontStyle(2.5rem, 2.7rem, var(--color-white), $body-font, 700);
+            letter-spacing: 0.5rem;
+            animation: slide-in-bottom 1s ease-out;
+        }
+    }
+}
+
+/////////////////////////////////
+// Home Page Animations
+/////////////////////////////////
+@-webkit-keyframes slide-in-bottom {
+    0% {
+        -webkit-transform: translateY(1000px);
+        transform: translateY(1000px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-bottom {
+    0% {
+        -webkit-transform: translateY(500px);
+        transform: translateY(500px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes slide-in-left {
+    0% {
+        -webkit-transform: translateX(-1000px);
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+    }
+    @keyframes slide-in-left {
+    0% {
+        -webkit-transform: translateX(-1000px);
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
