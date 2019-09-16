@@ -9,8 +9,12 @@
 	height: 95vh;
 
 	@media only screen and (max-width:$bp-medium ) {
-        height: auto;
-    }
+        min-height: 850px;
+	}
+	
+	@media only screen and (max-width: 390px) {
+		min-height: 1000px;
+	}
 }
 .Budget {
     display: flex;
@@ -49,6 +53,9 @@
 		@media only screen and (max-width:$bp-medium ) {
 			margin: 1.5rem;
 			width: 50rem;
+		}
+		@media only screen and (max-width: 390px) {
+			width: 30rem;
 		}
 	}
 
