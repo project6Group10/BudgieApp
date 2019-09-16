@@ -6,7 +6,7 @@ class InputExpenses extends Component {
         super(props);
         this.state = { 
             expenseName: '',
-            expenseAmount: 0,
+            expenseAmount: '',
             expenseDateInput: '',
         }
 
@@ -39,13 +39,13 @@ class InputExpenses extends Component {
 
             this.expenseRef.push({
                 expenseName: this.state.expenseName,
-                expenseAmount: this.state.expenseAmount,
+                expenseAmount: this.state.expenseAmount.replace(/^0+/,''),
                 expenseDate: this.state.expenseDateInput
             });
 
             this.setState({
                 expenseName: '',
-                expenseAmount: 0,
+                expenseAmount: '',
                 expenseDateInput: ''
             });
 

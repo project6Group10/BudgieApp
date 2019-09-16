@@ -21,6 +21,7 @@ class DisplayExpenseList extends Component {
     }
 
     render() { 
+<<<<<<< HEAD
         return ( 
             <ul className="Expenses__list">
                 {Object.keys(this.state.expenseLog).map((expense, index) => {
@@ -30,13 +31,32 @@ class DisplayExpenseList extends Component {
                                 name={this.state.expenseLog[expense]['expenseName']}
                                 amount={this.state.expenseLog[expense]['expenseAmount']}
                                 date={this.state.expenseLog[expense]['expenseDate']}
+=======
+        return (
+            <div className="Expenses__list">
+            {this.state.expenseLog ?
+                Object.keys(this.state.expenseLog).map((expense, index) => {
+
+                    return ( 
+                        <div className="Item" key={index}>
+                            <DisplayExpenseItems 
+                                name={this.state.expenseLog[expense]['expenseName']}
+                                amount={this.state.expenseLog[expense]['expenseAmount']}
+                                index={index}
+>>>>>>> date-remove
                                 uid={expense}
                             />
                         </li>
                     );
+<<<<<<< HEAD
                 })}
             </ul>
         );
+=======
+                }) : <p>Input Expense Above</p>}
+            </div>
+        )
+>>>>>>> date-remove
     }
 }
 
