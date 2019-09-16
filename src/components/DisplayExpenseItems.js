@@ -14,15 +14,6 @@ const DisplayExpenseItems = (props) => {
         // }
     }
     return (
-<<<<<<< HEAD
-        <div className="Item__inbox">
-            <span className="Item__description">{props.name}</span>
-            <span className="Item__value">- ${props.amount}</span>
-            <span className="Item__date">{props.date}</span>
-            <span className="Item__delete">
-                <button onClick={(uid) => removeItem(uid)} className="Item__delete--btn"><i className="far fa-times-circle"></i></button>
-            </span>
-=======
         <div>
             <div className="Item__inbox">
                 <div className="Item__description">{props.name}</div>
@@ -32,7 +23,6 @@ const DisplayExpenseItems = (props) => {
                     <button onClick={() => removeItem()} className="Item__delete--btn"><i className="far fa-times-circle"></i></button>
                 </div>
             </div>
->>>>>>> date-remove
         </div>
     )
 }
