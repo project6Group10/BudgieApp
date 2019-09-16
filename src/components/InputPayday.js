@@ -18,8 +18,9 @@ class InputPayday extends Component {
 
         this.salaryRef = firebase.database().ref().child('salaryItems');
         this.salaryInputRef = React.createRef();
-    }
+        
 
+    }
     componentDidMount() {
         this.salaryRef.on('value', (data) => {
             const response = data.val();
@@ -38,10 +39,17 @@ class InputPayday extends Component {
     }
 
     handleSalaryDateInput = (event) => {
-        // TODO: Add error handling past dates    
-        this.setState({
-            salaryDateInput: event.target.value
-        })
+        const now = new Date().toJSON().slice(0, 10).replace(/-/g, '/');
+        const payday = new Date(event.target.value).toJSON().slice(0, 10).replace(/-/g, '/');
+        if( payday < now){
+           alert("Please enter a date after today");
+           event.target.value = "";
+        } else {
+            this.setState({
+                salaryDateInput: event.target.value
+            })
+        } 
+        
     }
 
     handleSalarySubmit = (event) => {
