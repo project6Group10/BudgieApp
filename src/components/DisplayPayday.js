@@ -33,7 +33,7 @@ const DisplayPayday = (props) => {
                             aria-label="Submit payday."
                             aria-hidden="true"
                         >
-                            <i className="far fa-check-circle"></i>
+                            <i class="fas fa-plus-circle"></i>
                         </button> 
                     </form>
                 </div>

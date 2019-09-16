@@ -26,7 +26,7 @@ class InputExpenses extends Component {
         });
     }
 
-    handleSalaryDateInput = (event) => {   
+    handleDateInput = (event) => {   
         this.setState({
             expenseDateInput: event.target.value
         });
@@ -93,7 +93,7 @@ class InputExpenses extends Component {
                         type="date" 
                         className="Expenses__date"
                         placeholder="Date" 
-                        onChange={this.handleSalaryDateInput}
+                        onChange={this.handleDateInput}
                         name="expenseDate" 
                         id="expenseDate"
                     />
@@ -104,7 +104,7 @@ class InputExpenses extends Component {
                         aria-label="Submit expense."
                         aria-hidden="true"
                     >
-                        <i className="far fa-check-circle"></i>
+                        <i class="fas fa-plus-circle"></i>
                     </button>
                 </form>
             </section>
