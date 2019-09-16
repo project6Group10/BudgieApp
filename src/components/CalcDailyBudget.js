@@ -33,7 +33,7 @@ class CalcDailyBudget extends Component {
         expRef.on('value', expenses => {
             // PULLS VALUES INTO A LOCAL ARRAY FOR MANIPULATION
             const expenseArray = expenses.val()
-            const newArray = [];
+            const newArray = [0];
             // MAPS THROUGH THE OBJECT AND PUSHES EACH ITEM TO AN ARRAY
             for (let key in expenseArray) {
                 //ENSURES EACH VALUE IS SAVED AS A NUMBER
