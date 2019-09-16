@@ -25,6 +25,7 @@
 	}
 	&__income,
 	&__expenses {
+		width: 30rem;
 		text-transform: uppercase;
 		padding: 1.5rem 3rem;
 		display: flex;
@@ -75,6 +76,14 @@
 	}
 }
 
+.displayWidth {
+	width: 45%;
+
+	@media only screen and (max-width:$bp-medium ) {
+        width: 100%;
+    }
+}
+
 .info {
 	display: flex;
 }
@@ -102,7 +111,7 @@
 		letter-spacing: 2px;
 		text-transform: uppercase;
 		font-size: 2rem;
-		margin-bottom: 3rem;
+		margin: 3rem 0 3rem 0;
 	}
 	
     &__inputs {
@@ -217,6 +226,8 @@
 //DATE STYLES
 ///////////////////////////////// 
 .Salary {
+
+	width: 100%; 
     &__description {
         border: 1px solid var(--color-grey-light);
         background-color: var(--color-white);
@@ -228,6 +239,26 @@
         border-radius: 5px;
         transition: border 0.3s;
         outline: none;
-        width: 20rem;
+        width: 55%;
     }
+}
+
+.salary__inputs {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.date__input {
+	border: 1px solid var(--color-grey-light);
+	background-color: var(--color-white);
+	color: inherit;
+	font-family: inherit;
+	font-size: 14px;
+	padding: 12px 15px;
+	margin-right: 10px;
+	border-radius: 5px;
+	transition: border 0.3s;
+	outline: none;
+	width: 25%;
 }

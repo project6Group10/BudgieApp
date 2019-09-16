@@ -2,9 +2,14 @@ import React from 'react';
 
 const DisplayPaydayItems = (props) => {
     return (
-        <li>
-            <p className="">${props.amount} <span>{props.date}</span></p>
-        </li>
+        <div className="Item__inbox">
+            <div className="Item__value">${props.amount} </div>
+            <div className="Item__value">${props.date}</div>
+
+            <div className="Item__delete">
+                    <button className="Item__delete--btn"><i className="far fa-times-circle"></i></button>
+            </div>
+        </div>
     )
 }
 

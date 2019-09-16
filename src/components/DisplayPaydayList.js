@@ -24,18 +24,19 @@ class DisplayPaydayList extends Component {
 
     render() { 
         return ( 
-            <ul className="">
+            <div className="Expenses__list">
                 {Object.keys(this.state.paydayLog).map((payday, index) => {
                     return (
-                        <DisplayPaydayItems 
-                            date={this.state.paydayLog[payday]['salaryDate']}
-                            amount={this.state.paydayLog[payday]['salaryAmount']}
-                            key={index}
-                        />
-                        
+                        <div className="Item">
+                            <DisplayPaydayItems 
+                                date={this.state.paydayLog[payday]['salaryDate']}
+                                amount={this.state.paydayLog[payday]['salaryAmount']}
+                                key={index}
+                            />
+                        </div>             
                     );
                 })}
-            </ul>
+            </div>
         );
     }
 }

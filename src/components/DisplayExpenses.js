@@ -4,7 +4,7 @@ import DisplayExpenseList from './DisplayExpenseList';
 
 const DisplayExpenses = () => {
     return (
-        <div>
+        <div className="displayWidth">
             <div className="Expenses">
                 <InputExpenses />
                 <DisplayExpenseList />
