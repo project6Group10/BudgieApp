@@ -6,10 +6,9 @@ const DisplayPayday = (props) => {
         <div className="displayWidth">
             <div className="Salary"> 
                 <h4 className="Expenses__title">salary</h4>
-                <div className="salary__inputs">  
-                    <form action="" id="salaryInputForm" ref={props.salaryInputRef}>
+                <div>  
+                    <form action="" className="Salary__inputs" id="salaryInputForm" ref={props.salaryInputRef}>
                         <label htmlFor="salaryAmount" className="visuallyHidden">Input Salary Amount:</label>
-                        <span>$</span>
                         <input 
                             type="number" 
                             onChange={props.salaryInput}
@@ -23,7 +22,7 @@ const DisplayPayday = (props) => {
                         <input 
                             type="date" 
                             onChange={props.dateInput}
-                            className="date__input" 
+                            className="date__input Salary__date" 
                             name="salaryDate" 
                             id="salaryDate"
                         />

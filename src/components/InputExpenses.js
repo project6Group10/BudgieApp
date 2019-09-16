@@ -65,12 +65,12 @@ class InputExpenses extends Component {
         return ( 
             <section>
                 <h4 className="Expenses__title">Expenses</h4>
-                <form action="" className="Expenses__inputs" id="expensesInputForm" ref={this.expenseInputRef}>
+                <form className="Expenses__inputs" id="expensesInputForm" ref={this.expenseInputRef}>
                     <label htmlFor="expenseDesc" className="visuallyHidden">Input Expense Description:</label>
                     <input 
                         type="text"                                   
                         className="Expenses__description" 
-                        placeholder="Expense Descrition"
+                        placeholder="Expense Description"
                         onChange={this.handleNameChange}
                         value={this.state.expenseName}
                         name="expenseDesc" 
@@ -91,8 +91,9 @@ class InputExpenses extends Component {
                     <label htmlFor="expenseDate" className="visuallyHidden">Input Expense Date:</label>
                     <input 
                         type="date" 
+                        className="Expenses__date"
+                        placeholder="Date" 
                         onChange={this.handleSalaryDateInput}
-                        className="Expenses__date" 
                         name="expenseDate" 
                         id="expenseDate"
                     />
