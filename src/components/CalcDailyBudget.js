@@ -18,14 +18,16 @@ class CalcDailyBudget extends Component {
     //FUNCTION GRABS TODAY'S DATE USING JS
     getTodaysDate = () => {
         //SAVES DATE TO CONSTANT AND SLICES OUT EXTRNEOUS I?NFORMATIO?N
-        const date = new Date().toJSON().slice(0, 10).replace(/-/g, '/');
+        const now = new Date().toJSON().slice(0, 10).replace(/-/g, '/');
         // SAVES DATE IN STATE
         this.setState({
-            currentDate: date,
+            currentDate: now,
         })
     }
+    
 
     componentDidMount() {
+        
         // SETS A CONST FOR THE EXPENSE ITEMS FIREBASE REFERENCE
         const expRef = firebase.database().ref('expenseItems').orderByChild('expenseAmount')
         // LISTENS FOR CHANGE IN FIREBASE EXPENSE AMOUNTS
