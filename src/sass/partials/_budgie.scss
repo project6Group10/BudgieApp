@@ -202,11 +202,6 @@
 	&__value {
 		font-size: 1.8rem;
 		margin: auto;
-		transition: transform 0.3s;
-
-		&:hover {
-			transform: translateX(-20px); 
-		}
 	}
 
 	&__delete {

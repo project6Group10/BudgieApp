@@ -70,7 +70,7 @@ class InputExpenses extends Component {
                     <input 
                         type="text"                                   
                         className="Expenses__description" 
-                        placeholder="Expense Descrition"
+                        placeholder="Expense Description"
                         onChange={this.handleNameChange}
                         value={this.state.expenseName}
                         name="expenseDesc" 
