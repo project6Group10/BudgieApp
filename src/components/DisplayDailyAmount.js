@@ -5,9 +5,9 @@ const DisplayDailyAmount = (props) => {
         <div>
             <div className="Budget ">
                 <div className="Budget__title">
-                    Available Budget in <span className="Budget__title--month">{props.days} Days</span>:
+                    Daily budget for the next <span className="Budget__title--month">{props.days} days</span>:
                 </div>
-                <div className="Budget__value">{props.budget}</div>
+                <div className="Budget__value">$ {props.budget}</div>
                 <div className="info">
                     <div className="Budget__income">
                         <div className="Budget__income--text">Income</div>
