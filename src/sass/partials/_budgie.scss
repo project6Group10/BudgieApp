@@ -4,6 +4,14 @@
 .hero {
 	background-color: var(--color-primary-dark);
 }
+
+.budgie {
+	height: 95vh;
+
+	@media only screen and (max-width:$bp-medium ) {
+        height: auto;
+    }
+}
 .Budget {
     display: flex;
     flex-direction: column;
@@ -16,6 +24,10 @@
 		text-align: center;
 		color: var(--color-white);
 		line-height: 3.2rem;
+		@media only screen and (max-width:$bp-medium ) {
+			margin-top: 4rem;
+		}
+		
 	}
 	&__value {
 		font-size: 4rem;
@@ -34,6 +46,10 @@
 		text-align: center;
 		font-size: 2rem;
 		margin: 3rem;
+		@media only screen and (max-width:$bp-medium ) {
+			margin: 1.5rem;
+			width: 50rem;
+		}
 	}
 
 	&__income {
@@ -86,6 +102,10 @@
 
 .info {
 	display: flex;
+
+	@media only screen and (max-width:$bp-medium ) {
+        flex-direction: column;
+    }
 }
 .flex {
 	display: flex;
