@@ -25,7 +25,6 @@ class CalcDailyBudget extends Component {
         })
     }
     
-
     componentDidMount() {
         
         // SETS A CONST FOR THE EXPENSE ITEMS FIREBASE REFERENCE

@@ -21,7 +21,7 @@ class DisplayExpenseList extends Component {
     }
 
     render() { 
-        return ( 
+        return (
             <div className="Expenses__list">
                 {Object.keys(this.state.expenseLog).map((expense, index) => {
                     return (
@@ -35,7 +35,7 @@ class DisplayExpenseList extends Component {
                     );
                 })}
             </div>
-        );
+        )
     }
 }
  
