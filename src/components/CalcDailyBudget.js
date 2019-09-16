@@ -9,7 +9,7 @@ class CalcDailyBudget extends Component {
             expenseTotal: [],
             currentDate: "",
             nextPayday: "",
-            daysDifference: 0,
+            daysDifference: 1,
             salaryAmount: "",
             dailyBudget: ""
         }
