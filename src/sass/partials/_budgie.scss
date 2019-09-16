@@ -225,19 +225,17 @@
 
 	&__delete {
 		&--btn { 
-			font-size: 2.2rem;
+            @include fontStyle(1.9rem, 2.0rem, rgba($tertiary, 0.5), $body-font, 400);
 			background: none;
 			border: none;
-			line-height: 1;
-			color: red;
-			cursor: pointer;
+            cursor: pointer;
+            transition: all 0.3s;
 
-			&:focus {
-				outline: none;
-			}
-
-			&:active {
-				transform: translateY(2px);
+            &:focus,
+            &:active,
+            &:hover {
+                outline: none;
+                color: rgba($tertiary, 1);
 			}
 		}
 	}

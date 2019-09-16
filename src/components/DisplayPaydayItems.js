@@ -11,7 +11,7 @@ const DisplayPaydayItems = (props) => {
             <div className="Item__value">{props.date}</div>
 
             <div className="Item__delete">
-                    <button className="Item__delete--btn" onClick={() => removeItem()}><i className="far fa-times-circle"></i></button>
+                    <button className="Item__delete--btn" onClick={() => removeItem()}><i class="fas fa-trash-alt"></i></button>
             </div>
         </div>
     )

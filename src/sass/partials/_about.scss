@@ -12,7 +12,7 @@
 
 .title {
     text-transform: uppercase;
-    @include fontStyle(3.8rem, 4.2rem, var(--color-primary), $body-font, 700);
+    @include fontStyle(3.8rem, 4.2rem, var(--color-primary-dark), $body-font, 700);
     margin: 3rem 0;
 
     &__span {
