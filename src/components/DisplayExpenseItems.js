@@ -8,15 +8,13 @@ const DisplayExpenseItems = (props) => {
         firebase.database().ref().child('expenseItems').child(props.uid).remove()
     }
     return (
-        <div>
-            <div className="Item__inbox">
-                <div className="Item__description">{props.name}</div>
-                <div className="Item__value">- {props.amount}</div>
-                {/* <div className="Item__percentage"></div> */}
-                <div className="Item__delete">
-                    <button onClick={(uid) => removeItem(uid)} className="Item__delete--btn"><i className="far fa-times-circle"></i></button>
-                </div>
-            </div>
+        <div className="Item__inbox">
+            <span className="Item__description">{props.name}</span>
+            <span className="Item__value">- ${props.amount}</span>
+            <span className="Item__date">{props.date}</span>
+            <span className="Item__delete">
+                <button onClick={(uid) => removeItem(uid)} className="Item__delete--btn"><i className="far fa-times-circle"></i></button>
+            </span>
         </div>
     )
 }

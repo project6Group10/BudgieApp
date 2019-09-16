@@ -22,21 +22,22 @@ class DisplayExpenseList extends Component {
 
     render() { 
         return ( 
-            <div className="Expenses__list">
+            <ul className="Expenses__list">
                 {Object.keys(this.state.expenseLog).map((expense, index) => {
                     return (
-                        <div className="Item" key={index}>
+                        <li className="Item" key={index}>
                             <DisplayExpenseItems 
                                 name={this.state.expenseLog[expense]['expenseName']}
                                 amount={this.state.expenseLog[expense]['expenseAmount']}
+                                date={this.state.expenseLog[expense]['expenseDate']}
                                 uid={expense}
                             />
-                        </div>
+                        </li>
                     );
                 })}
-            </div>
+            </ul>
         );
     }
 }
- 
+
 export default DisplayExpenseList;

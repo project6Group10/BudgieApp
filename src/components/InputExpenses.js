@@ -17,30 +17,32 @@ class InputExpenses extends Component {
     handleNameChange = (event) => {
         this.setState({
             expenseName: event.target.value
-        })
+        });
     }
 
     handleAmountChange = (event) => {
         this.setState({
             expenseAmount: event.target.value
-        })
+        });
     }
 
     handleSalaryDateInput = (event) => {   
         this.setState({
             expenseDateInput: event.target.value
-        })
+        });
     }
 
     handleClick = event => {
         event.preventDefault();
+
         if (this.state.expenseName !== '' && this.state.expenseAmount > 0 && this.state.expenseDateInput !== '') {
-            console.log("in here pushing");
+
             this.expenseRef.push({
                 expenseName: this.state.expenseName,
                 expenseAmount: this.state.expenseAmount,
                 expenseDate: this.state.expenseDateInput
-            })
+            });
+
             this.setState({
                 expenseName: '',
                 expenseAmount: 0,

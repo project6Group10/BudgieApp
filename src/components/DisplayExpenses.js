@@ -4,12 +4,12 @@ import DisplayExpenseList from './DisplayExpenseList';
 
 const DisplayExpenses = () => {
     return (
-        <div className="displayWidth">
+        <section className="displayWidth">
             <div className="Expenses">
                 <InputExpenses />
                 <DisplayExpenseList />
             </div>
-        </div> 
+        </section> 
     )
 }
 
