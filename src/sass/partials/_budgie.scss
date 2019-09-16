@@ -10,12 +10,12 @@
 	min-height: 650px;
 
 	@media only screen and (max-width:$bp-medium ) {
-        min-height: 850px;
+        min-height: 1000px;
 	}
 	
-	@media only screen and (max-width: 390px) {
-		min-height: 1000px;
-	}
+	// @media only screen and (max-width: 390px) {
+	// 	min-height: 1000px;
+	// }
 }
 
 .Budget {
