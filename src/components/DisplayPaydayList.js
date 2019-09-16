@@ -25,7 +25,8 @@ class DisplayPaydayList extends Component {
     render() { 
         return ( 
             <div className="Expenses__list">
-                {Object.keys(this.state.paydayLog).map((payday, index) => {
+            {this.state.paydayLog ? 
+                Object.keys(this.state.paydayLog).map((payday, index) => {
                     return (
                         <div className="Item">
                             <DisplayPaydayItems 
@@ -36,9 +37,9 @@ class DisplayPaydayList extends Component {
                             />
                         </div>             
                     );
-                })}
+                }) : <p>Enter Payday Information Above</p>}
             </div>
-        );
+        )
     }
 }
  

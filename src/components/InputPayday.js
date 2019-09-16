@@ -22,13 +22,13 @@ class InputPayday extends Component {
 
     }
     componentDidMount() {
-        this.salaryRef.on('value', (data) => {
-            const response = data.val();
-            console.log("InputPayDay-> response: ",response);
-            this.setState({
-                currentSalary: response.salaryAmount
-            })
-        })
+        // this.salaryRef.on('value', (data) => {
+        //     const response = data.val();
+        //     console.log("InputPayDay-> response: ",response);
+        //     this.setState({
+        //         currentSalary: response.salaryAmount
+        //     })
+        // })
     }
 
     handleSalaryInput = (event) => {
