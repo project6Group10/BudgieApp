@@ -30,52 +30,51 @@ class InputPayday extends Component {
 
     handleSalarySubmit = (event) => {
         event.preventDefault();
-        const today = new Date();
-        const tomorrow = new Date();
-        tomorrow.setDate(today.getDate() + 1);
-        const now = tomorrow.toJSON().slice(0, 10).replace(/-/g, '/');
-        const payday = new Date(this.state.salaryDateInput).toJSON().slice(0, 10).replace(/-/g, '/');
 
-        if (this.state.salaryInput > 0 && this.state.salaryDateInput && payday > now) {
-            this.salaryRef.set({
-                salaryAmount: this.state.salaryInput,
-                salaryDate: this.state.salaryDateInput,
-            });
-
-            this.setState({
-                salaryInput: '',
-                salaryDateInput: '',
-            });
-
-            this.salaryInputRef.current.reset();
-
-        } else if (this.state.salaryInput <= 0) {
+        if (this.state.salaryInput <= 0) {
             Swal.fire(
                 'Whoops...',
                 'Enter a salary amount greater than 0!',
                 'error'
             );
             this.salaryInputRef.current.reset();
-        } else if (this.state.salaryDateInput === '') {
+
+        } else if (this.state.salaryDateInput == '') {
+            // NO PAYDATE INFORMATION
             Swal.fire(
                 'Whoops...',
                 'Please enter a pay date!',
                 'error'
             );
-        } else if (payday < now) {
-            console.log('bad')
+        } else {
+            const today = new Date();
+            const tomorrow = new Date();
+            // TODO: convert to UTC
+            // tomorrow.setDate(today.getDate() + 1);
+            const now = today.toJSON().slice(0, 10).replace(/-/g, '/');
+            const payday = new Date(this.state.salaryDateInput).toJSON().slice(0, 10).replace(/-/g, '/');
+
+            if (this.state.salaryInput > 0 && this.state.salaryDateInput && payday > now) {
+                this.salaryRef.set({
+                    salaryAmount: this.state.salaryInput,
+                    salaryDate: this.state.salaryDateInput,
+                });
+    
+                this.setState({
+                    salaryInput: '',
+                    salaryDateInput: '',
+                });
+    
+                this.salaryInputRef.current.reset();
+
+            } else if (payday < now) {
                 Swal.fire(
                     'Whoops...',
                     'Please enter a date after today.',
                     'error'
                 );
                 event.target.value = "";
-        } else {
-            Swal.fire(
-                'Uh oh...',
-                'Missing pay date and pay amount information!',
-                'error'
-            );
+            } 
         }
     }
     
