@@ -25,12 +25,12 @@ const About = () =>  {
                     </h1>
                     <div className="row">
                         <section className="col-1-of-2">
-                            <h2 className="subtitle">Budgie is here for you</h2>
+                            <h2 className="subtitle">That's what Budgie is for</h2>
                             <div className="composition">
                                 <img src={Avatar} alt="Two faceless animated people" className="image composition__photo" />
                             </div>
                             <p className="paragraph">
-                            Enter the amount and date of your next pay date and Budgie will calculate a daily budget between now and payday. As daily expenses are inccured, enter them into the expense field and Budgie will account for the expenses and adjust the daily budget.
+                            Enter the date and value of your next paycheck and Budgie will calculate a daily budget between now and payday. As you incur expenses, enter them into the expense field and Budgie will account for the expenses and adjust the daily budget.
                             </p>
                             <Link to="/Budgie" className="btn-start">start</Link>
                         </section>
