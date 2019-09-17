@@ -18,7 +18,7 @@ const Footer = () =>  {
                     <li className="Footer__social-media-item">
                         <a 
                             className="Footer__social-media-link" 
-                            href="https://www.facebook.com"
+                            href="https://www.facebook.com/BudgieApp/"
                             aria-label="Go to Facebook"
                         >
                             <i className="fab fa-facebook-f"
