@@ -24,7 +24,7 @@ class DisplayPaydayList extends Component {
 
     render() { 
         return ( 
-            <div className="Expenses__list">
+            <div className="Salary__list">
             {this.state.paydayLog ? 
                 Object.keys(this.state.paydayLog).map((payday, index) => {
                     return (

@@ -150,6 +150,26 @@
 	&__date { 
         width: 30%;
 	}
+
+	&__btn {
+		@include fontStyle(3.5rem, 3.7rem, var(--color-primary), $body-font, 700);
+        background: none;
+        border: none;
+        outline: none;
+		cursor: pointer;
+		
+		&:focus,
+		&:active { 
+			color: var(--color-primary-dark); 
+		}
+	}
+	
+	&__list {
+		overflow: scroll;
+		height: 15rem;
+
+		
+	}
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
@@ -158,11 +178,7 @@
 
 .Expenses {
 	margin-bottom: 5rem;
-
-	&__list {
-		overflow: scroll;
-		height: 15rem;
-	}   
+ 
     &__title {
 		@include fontStyle(2rem, 2.5rem, var(--color-primary-dark), $body-font, 700);
 		text-transform: uppercase;
@@ -174,8 +190,7 @@
 		@include flex(row, space-between);
 	}
 
-	&__description,
-	&__date { 
+	&__description { 
         width: 35%;
 	}
 	
@@ -192,11 +207,26 @@
         background: none;
         border: none;
         outline: none;
-        cursor: pointer;
-    }
+		cursor: pointer;
+		
+		&:focus,
+		&:active { 
+			color: var(--color-primary-dark); 
+		}
+	}
+	
+	&__list {
+		overflow: scroll;
+		height: 15rem;
+	}
 }
 
+//////////////////////////////////////////////////////////////////////////////////////
+// Items style 
+//////////////////////////////////////////////////////////////////////////////////////
+
 .Item {
+	width: 100%;
     padding: 1.3rem;
 	border-bottom: 1px solid var(--color-grey-light);
 	
@@ -208,20 +238,29 @@
         background-color: var(--color-grey-light);
 	}
 	
-    &__inbox{
-		@include flex(row);
-    }
+    &__inbox {
+		@include flex(row, space-between);
+	}
 
+	&__description,
 	&__value,
 	&__date {
 		@include fontStyle(1.8rem, 2.0rem, var(--color-grey-dark-1), $body-font, 400);
-		//FIXME: maybe we want to just add widths to each value instead of margin 0
-		margin: auto; 
 		transition: transform 0.3s;
+	}
 
-		// &:hover {
-		// 	transform: translateX(-20px); 
-		// }
+	&__description { 
+		text-align: left;
+		padding-left: 1%;
+        width: 35%;
+	}
+	
+    &__value { 
+        width: 25%;
+	}
+
+	&__date { 
+        width: 30%;
 	}
 
 	&__delete {
@@ -242,6 +281,10 @@
 	}
 }
 
-.add__btn:active { transform: translateY(2px); }
+.Salary__list {
+	.Item__value {
+		width: 60%;
+	}
+}
 
-.add__btn:focus { outline: none; }
+

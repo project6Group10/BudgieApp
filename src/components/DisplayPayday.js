@@ -29,7 +29,7 @@ const DisplayPayday = (props) => {
 
                         <button 
                             onClick={props.buttonClick} 
-                            className="Expenses__btn"
+                            className="Salary__btn"
                             aria-label="Submit payday."
                             aria-hidden="true"
                         >
