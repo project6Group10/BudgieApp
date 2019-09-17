@@ -8,11 +8,18 @@ const DisplayPaydayItems = (props) => {
     
     return (
         <div className="Item__inbox">
-            <div className="Item__value">${parseFloat(props.amount).toFixed(2)}</div>
-            <div className="Item__date">{props.date}</div>
-            <div className="Item__delete">
-                <button className="Item__delete--btn" onClick={() => removeItem()}><i class="fas fa-trash-alt"></i></button>
-            </div>
+            <span className="Item__value">${parseFloat(props.amount).toFixed(2)}</span>
+            <span className="Item__date">{props.date}</span>
+            <span className="Item__delete">
+                <button 
+                    className="Item__delete--btn" 
+                    onClick={() => removeItem()}
+                    aria-label="Delete payday item."
+                    aria-hidden="true"
+                >
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+            </span>
         </div>
     )
 }
