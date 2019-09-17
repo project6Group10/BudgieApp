@@ -1,8 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Footer extends Component {
-    state = {  }
-    render() { 
+const Footer = () =>  {
         return ( 
             <footer className="Footer">
                 <ul className="Footer__social-media">
@@ -41,8 +39,7 @@ class Footer extends Component {
                     </li>
                 </ul>
             </footer>
-        );
-    }
+        ); 
 }
  
 export default Footer;

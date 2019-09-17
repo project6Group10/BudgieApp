@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Avatar from '../assets/avatar.jpeg';
 import { Link } from 'react-router-dom';
 import BudgieLogo from '../assets/budgie.png';
 
-class About extends Component {
-
-    render() { 
+const About = () =>  {
         return ( 
             <div className="about">
                 <nav className="navigation">
@@ -22,10 +20,8 @@ class About extends Component {
                         </li>
                     </ul>
                 </nav>
-
                 <main className="Container">
                     <h1 className="title">Need a short-term budget? 
-                        {/* <span className="title__span">Budgie is here for you.</span> */}
                     </h1>
                     <div className="row">
                         <section className="col-1-of-2">
@@ -46,9 +42,7 @@ class About extends Component {
                     </div> 
                 </main>
             </div> 
-        
         );
-    }
 }
 
 export default About;

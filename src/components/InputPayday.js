@@ -14,8 +14,6 @@ class InputPayday extends Component {
 
         this.salaryRef = firebase.database().ref().child('salaryItems').child('key');
         this.salaryInputRef = React.createRef();
-        
-
     }
 
     handleSalaryInput = (event) => {
@@ -43,8 +41,7 @@ class InputPayday extends Component {
             this.setState({
                 salaryDateInput: event.target.value
             })
-        } 
-        
+        }   
     }
 
     handleSalarySubmit = (event) => {
