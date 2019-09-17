@@ -18,9 +18,10 @@ class InputPayday extends Component {
     }
 
     handleSalaryInput = (event) => {
-        console.log("InputPayDay-> salaryInput: ", this.state.salaryInput);        
+        const salary = event.target.value
+        const salaryInput = Number(salary).toFixed(2)
         this.setState({
-            salaryInput: event.target.value
+            salaryInput
         })
     }
 

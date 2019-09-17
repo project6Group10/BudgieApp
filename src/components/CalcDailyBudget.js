@@ -45,7 +45,7 @@ class CalcDailyBudget extends Component {
             const total = newArray.reduce(reducer)
             // PUSHES EXPENSE TOTAL TO STATE
             this.setState({
-                expenseTotal: total,
+                expenseTotal: total.toFixed(2),
                 // WAITS FOR EXPENSETOTAL TO BE SET THEN RECALCULATES DAILY BUDGET
             }, () => {
                 const budget = (this.state.salaryAmount - this.state.expenseTotal) / this.state.daysDifference;

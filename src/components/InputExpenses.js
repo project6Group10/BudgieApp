@@ -39,7 +39,7 @@ class InputExpenses extends Component {
 
             this.expenseRef.push({
                 expenseName: this.state.expenseName,
-                expenseAmount: this.state.expenseAmount.replace(/^0+/,''),
+                expenseAmount: Number(this.state.expenseAmount).toFixed(2).replace(/^0+/,''),
                 expenseDate: this.state.expenseDateInput
             });
 
