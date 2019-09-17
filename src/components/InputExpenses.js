@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import firebase from '../firebase';
+import Swal from 'sweetalert2';
 
 class InputExpenses extends Component {
     constructor(props) {
@@ -52,11 +53,23 @@ class InputExpenses extends Component {
             this.expenseInputRef.current.reset();
 
         } else if (this.state.expenseName === '') {
-            alert("Please enter a description for the expense item.");
+            Swal.fire(
+                'Whoops...',
+                'Please enter a description for the expense item.',
+                'error'
+            );
         } else if (this.state.expenseAmount <= 0) {
-            alert("Enter an expense amount greater than 0!");
+            Swal.fire(
+                'Whoops...',
+                'Enter an expense amount greater than 0!',
+                'error'
+            );
         } else if (this.state.expenseDateInput === '') {
-            alert("Please enter a date for the expense item!");
+            Swal.fire(
+                'Whoops...',
+                'Please enter a date for the expense item!',
+                'error'
+            );
         }
     }
 
