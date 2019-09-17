@@ -14,19 +14,17 @@ class Budget extends Component {
                 </div>
                 
                <div className="Budget__value">+ 2,345.64</div>
-              <div className="info">
+               <div className="info">
                     <div className="Budget__income">
                         <div className="Budget__income--text">Income</div>
                             <div className="Budget__income--value">+ 4,300.00</div>
-                            <div className="Budget__income--percentage">20%</div>
                     </div>
                     
                     <div className="Budget__expenses">
                         <div className="Budget__expenses--text">Expenses</div>
                             <div className="Budget__expenses--value">- 1,954.36</div>
-                            <div className="Budget__expenses--percentage">45%</div>
                        </div>
-            </div>
+                </div>
             </div>
 
             {/* Bottom styles */}
@@ -44,7 +42,6 @@ class Budget extends Component {
                             <div className="Item__inbox">
                             <div className="Item__description">Apartment rent</div>   
                                 <div className="Item__value">- 900.00</div>
-                                <div className="Item__percentage">21%</div>
                                 <div className="Item__delete">
                                     <button className="Item__delete--btn"><i className="far fa-times-circle"></i></button>
                                 </div>
@@ -55,7 +52,6 @@ class Budget extends Component {
                             <div className="Item__inbox ">
                             <div className="Item__description">Grocery shopping</div>
                                 <div className="Item__value">- 435.28</div>
-                                <div className="Item__percentage">10%</div>
                                 <div className="Item__delete">
                                     <button className="Item__delete--btn"><i className="far fa-times-circle"></i></button>
                                 </div>
