@@ -74,7 +74,13 @@ class CalcDailyBudget extends Component {
                     const Difference_In_Days = Math.ceil(Difference_In_Time / (1000 * 3600 * 24));
                     this.setState({
                         daysDifference: Difference_In_Days,
+                    }, () => {
+                        const budget = (this.state.salaryAmount - this.state.expenseTotal) / this.state.daysDifference;
+                        this.setState({
+                            dailyBudget: budget.toFixed(2),
+                        })
                     })
+                    
                 })
             }
         })
