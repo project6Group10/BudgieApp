@@ -18,7 +18,7 @@ const DisplayPayday = (props) => {
                             placeholder="Salary Amount (e.g. 1000)"
                         />
 
-                        <label htmlFor="salary" className="visuallyHidden">Input Salary Date:</label>
+                        <label htmlFor="salaryDate" className="visuallyHidden">Input Salary Date:</label>
                         <input 
                             type="date" 
                             onChange={props.dateInput}
