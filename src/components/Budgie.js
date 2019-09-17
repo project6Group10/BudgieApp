@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../sass/App.scss';
 import { Link } from 'react-router-dom';
 import BudgieLogo from '../assets/budgie.png';
@@ -6,9 +6,7 @@ import CalcDailyBudget from './CalcDailyBudget';
 import InputPayday from './InputPayday';
 import DisplayExpenses from './DisplayExpenses';
 
-class Budgie extends Component {
-    state = {  }
-    render() { 
+const Budgie = () => {
         return (
             <section className="budgie">
                 <nav className="navigation">
@@ -38,7 +36,6 @@ class Budgie extends Component {
                 </main>
             </section>
         );
-    }
 }
 
 export default Budgie;
