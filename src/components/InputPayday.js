@@ -52,8 +52,8 @@ class InputPayday extends Component {
             });
 
             this.setState({
-                salaryInput: "",
-                salaryDateInput: 0,
+                salaryInput: '',
+                salaryDateInput: '',
             });
 
             this.salaryInputRef.current.reset();
