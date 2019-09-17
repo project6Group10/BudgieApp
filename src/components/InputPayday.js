@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import firebase from '../firebase';
+import Swal from 'sweetalert2';
 import DisplayPayday from './DisplayPayday';
 
 class InputPayday extends Component {
@@ -32,8 +33,12 @@ class InputPayday extends Component {
         const now = tomorrow.toJSON().slice(0, 10).replace(/-/g, '/');
         const payday = new Date(event.target.value).toJSON().slice(0, 10).replace(/-/g, '/');
         if(payday < now){
-           alert("Please enter a date after today");
-           event.target.value = "";
+            Swal.fire(
+                'Whoops...',
+                'Please enter a date after today.',
+                'error'
+            );
+            event.target.value = "";
         } else {
             this.setState({
                 salaryDateInput: event.target.value
@@ -59,12 +64,24 @@ class InputPayday extends Component {
             this.salaryInputRef.current.reset();
 
         } else if (this.state.salaryInput <= 0) {
-            alert("Enter a salary amount greater than 0!");
+            Swal.fire(
+                'Whoops...',
+                'Enter a salary amount greater than 0!',
+                'error'
+            );
             this.salaryInputRef.current.reset();
         } else if (this.state.salaryDateInput === '') {
-            alert("Please enter a pay date!");
+            Swal.fire(
+                'Whoops...',
+                'Please enter a pay date!',
+                'error'
+            );
         } else {
-            alert("Please enter a salary amount and pay date!");
+            Swal.fire(
+                'Uh oh...',
+                'Missing pay date and pay amount information!',
+                'error'
+            );
         }
     }
     
