@@ -77,18 +77,6 @@
 		letter-spacing: 1px; 
 		color: var(--color-primary-dark);
 	}
-
-	&__income--percentage,
-	&__expenses--percentage {
-		background-color: var(--color-primary-dark);
-		@include flex(row);
-		@include fontStyle(1.3rem, 1.7rem, var(--color-white), $body-font, 700);
-		text-align: center;
-		height: 4rem;
-		width: 4rem;
-		margin-left: 1rem;
-		border-radius: 50%;
-	}
 }
 
 .displayWidth {
