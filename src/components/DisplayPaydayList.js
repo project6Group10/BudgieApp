@@ -28,12 +28,11 @@ class DisplayPaydayList extends Component {
             {this.state.paydayLog ? 
                 Object.keys(this.state.paydayLog).map((payday, index) => {
                     return (
-                        <li className="Item">
+                        <li className="Item" key={payday}>
                             <DisplayPaydayItems 
                                 date={this.state.paydayLog[payday]['salaryDate']}
                                 amount={this.state.paydayLog[payday]['salaryAmount']}
                                 key={payday}
-                                uid={payday}
                             />
                         </li>             
                     );
