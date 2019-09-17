@@ -2,11 +2,6 @@ import React, { Component } from 'react';
 import firebase from '../firebase';
 import DisplayPayday from './DisplayPayday';
 
-// Take user input for Salary and handle it
-// Take user input for Date and handle it
-// Push those to Firebase, so CalcDailyBudget and CalcPayDay can use this info
-
-
 class InputPayday extends Component {
     constructor() {
         super();
@@ -21,15 +16,6 @@ class InputPayday extends Component {
         
 
     }
-    componentDidMount() {
-        // this.salaryRef.on('value', (data) => {
-        //     const response = data.val();
-        //     console.log("InputPayDay-> response: ",response);
-        //     this.setState({
-        //         currentSalary: response.salaryAmount
-        //     })
-        // })
-    }
 
     handleSalaryInput = (event) => {
         console.log("InputPayDay-> salaryInput: ", this.state.salaryInput);        
@@ -39,9 +25,12 @@ class InputPayday extends Component {
     }
 
     handleSalaryDateInput = (event) => {
-        const now = new Date().toJSON().slice(0, 10).replace(/-/g, '/');
+        const today = new Date();
+        const tomorrow = new Date();
+        tomorrow.setDate(today.getDate() + 1);
+        const now = tomorrow.toJSON().slice(0, 10).replace(/-/g, '/');
         const payday = new Date(event.target.value).toJSON().slice(0, 10).replace(/-/g, '/');
-        if( payday < now){
+        if(payday < now){
            alert("Please enter a date after today");
            event.target.value = "";
         } else {
