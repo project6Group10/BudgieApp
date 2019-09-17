@@ -55,7 +55,6 @@ class InputExpenses extends Component {
             alert("Please enter a description for the expense item.");
         } else if (this.state.expenseAmount <= 0) {
             alert("Enter an expense amount greater than 0!");
-            this.expenseInputRef.current.reset();
         } else if (this.state.expenseDateInput === '') {
             alert("Please enter a date for the expense item!");
         }
