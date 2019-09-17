@@ -22,6 +22,7 @@ const DisplayPayday = (props) => {
                         <input 
                             type="date" 
                             onChange={props.dateInput}
+                            placeholder="Date"
                             className="date__input Salary__date" 
                             name="salaryDate" 
                             id="salaryDate"
