@@ -304,3 +304,15 @@
 	padding-top: 15px;
 }
 
+//THE FOLLOWING IS REMOVING DEFAULT FUNCTION BUTTONS FROM DATE INPUT
+
+input[type=date]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	display: none;
+  }
+  
+  input[type=date]::-webkit-clear-button{
+	  display: none;
+	  -webkit-appearance: none;
+  }
+  
