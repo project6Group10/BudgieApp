@@ -20,7 +20,7 @@ const DisplayExpenseItems = (props) => {
                     aria-label="Delete expense item."
                     aria-hidden="true"
                 >
-                    <i class="fas fa-trash-alt"></i>
+                    <i className="fas fa-trash-alt"></i>
                 </button>
             </span>
         </div>

@@ -116,7 +116,7 @@ class InputExpenses extends Component {
                         aria-label="Submit expense."
                         aria-hidden="true"
                     >
-                        <i class="fas fa-plus-circle"></i>
+                        <i className="fas fa-plus-circle"></i>
                     </button>
                 </form>
             </section>
