@@ -4,7 +4,6 @@
 .Footer {
     @include flex(row);
     background-color: var(--color-primary-dark);
-    color: var(--color-white);
     height: 6vh;
     width: 100%;
 
@@ -16,11 +15,22 @@
         @include flex(row, space-between, center);
 
         &-item {
+            width: 3rem;
             margin: 0 2rem;
         }
-    }
 
-    .fab {
-        color: var(--color-primary);
+        &-link {
+            color: var(--color-primary);
+            transition: all 0.3s;
+
+            &:focus {
+                color: var(--color-white);
+                outline: none;
+            }
+        }
+
+        &-item:hover &-link {
+            color: var(--color-white);
+        }
     }
 }
