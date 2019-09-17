@@ -33,6 +33,7 @@ class DisplayPaydayList extends Component {
                                 date={this.state.paydayLog[payday]['salaryDate']}
                                 amount={this.state.paydayLog[payday]['salaryAmount']}
                                 key={index}
+                                uid={payday}
                             />
                         </li>             
                     );
