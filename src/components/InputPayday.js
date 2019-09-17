@@ -12,7 +12,7 @@ class InputPayday extends Component {
             salaryDateInput: '',
         }
 
-        this.salaryRef = firebase.database().ref().child('salaryItems');
+        this.salaryRef = firebase.database().ref().child('salaryItems').child('key');
         this.salaryInputRef = React.createRef();
         
 
@@ -51,7 +51,7 @@ class InputPayday extends Component {
         event.preventDefault();
 
         if (this.state.salaryInput > 0 && this.state.salaryDateInput) {
-            this.salaryRef.push({
+            this.salaryRef.set({
                 salaryAmount: this.state.salaryInput,
                 salaryDate: this.state.salaryDateInput,
             });
