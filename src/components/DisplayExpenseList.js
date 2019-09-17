@@ -36,7 +36,7 @@ class DisplayExpenseList extends Component {
                             />
                         </li>
                     );
-                }) : <p>Input Expense Above</p>}
+                }) : <li><p>Input Expense Above</p></li>}
             </ul>
         )
     }
