@@ -10,7 +10,7 @@ class CalcDailyBudget extends Component {
             currentDate: "",
             nextPayday: "",
             daysDifference: 1,
-            salaryAmount: "",
+            salaryAmount: 0,
             dailyBudget: ""
         }
     }
@@ -84,8 +84,16 @@ class CalcDailyBudget extends Component {
         // LISTENS FOR CHANGE IN SALARY AMOUNTS
         amountRef.on('value', amount => {
             const salary = amount.val();
-            // GOES THROUGH ALL AMMOUNTS AND SETS STATE
-            //***************** NEEDS TO BE FIXED TO SUM AMOUNTS *****************/
+            if (amount.val() == null) {
+                this.setState({
+                    salaryAmount: 0,
+                }, () => {
+                    const budget = (this.state.salaryAmount - this.state.expenseTotal) / this.state.daysDifference;
+                    this.setState({
+                        dailyBudget: budget.toFixed(2),
+                    })
+                })
+            } else {
             for (let key in salary) {
                 this.setState({
                     salaryAmount: salary[key].salaryAmount
@@ -96,7 +104,7 @@ class CalcDailyBudget extends Component {
                         dailyBudget: budget.toFixed(2),
                     })
                 })
-            }
+            }}
         })
     }
 
