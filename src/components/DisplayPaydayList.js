@@ -24,21 +24,21 @@ class DisplayPaydayList extends Component {
 
     render() { 
         return ( 
-            <div className="Salary__list">
+            <ul className="Salary__list">
             {this.state.paydayLog ? 
                 Object.keys(this.state.paydayLog).map((payday, index) => {
                     return (
-                        <div className="Item">
+                        <li className="Item">
                             <DisplayPaydayItems 
                                 date={this.state.paydayLog[payday]['salaryDate']}
                                 amount={this.state.paydayLog[payday]['salaryAmount']}
                                 key={index}
                                 uid={payday}
                             />
-                        </div>             
+                        </li>             
                     );
-                }) : <p>Enter Payday Information Above</p>}
-            </div>
+                }) : <li><p>Enter Payday Information Above</p></li>}
+            </ul>
         )
     }
 }

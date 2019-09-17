@@ -87,6 +87,7 @@ class CalcDailyBudget extends Component {
             if (amount.val() == null) {
                 this.setState({
                     salaryAmount: 0,
+                    daysDifference: 1,
                 }, () => {
                     const budget = (this.state.salaryAmount - this.state.expenseTotal) / this.state.daysDifference;
                     this.setState({
