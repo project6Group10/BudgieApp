@@ -3,23 +3,23 @@ import React from 'react';
 const DisplayDailyAmount = (props) => {
     return (
         <div>
-            <div className="Budget ">
-                <div className="Budget__title">
-                    Daily budget for the next <span className="Budget__title--month">{props.days} days</span>:
-                </div>
-                <div className="Budget__value">$ {props.budget}</div>
+            <section className="Budget">
+                <p className="Budget__title">
+                    Daily budget for the next <span className="Budget__title--month">{props.days} {(props.days == 1 ? 'day' : 'days')}</span>:
+                </p>
+                <p className="Budget__value">$ {props.budget}</p>
                 <div className="info">
                     <div className="Budget__income">
-                        <div className="Budget__income--text">Income</div>
-                        <div className="Budget__income--value">${props.income}</div>
+                        <p className="Budget__income--text">Income</p>
+                        <p className="Budget__income--value">${props.income}</p>
                     </div>
 
                     <div className="Budget__expenses">
-                        <div className="Budget__expenses--text">Expenses</div>
-                        <div className="Budget__expenses--value">${props.total}</div>
+                        <p className="Budget__expenses--text">Expenses</p>
+                        <p className="Budget__expenses--value">${props.total}</p>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
     )
 }
