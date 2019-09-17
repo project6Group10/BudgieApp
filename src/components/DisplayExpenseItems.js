@@ -14,14 +14,12 @@ const DisplayExpenseItems = (props) => {
         // }
     }
     return (
-        <div>
-            <div className="Item__inbox">
-                <div className="Item__description">{props.name}</div>
-                <div className="Item__value">- {props.amount}</div>
-                {/* <div className="Item__percentage"></div> */}
-                <div className="Item__delete">
-                    <button onClick={() => removeItem()} className="Item__delete--btn"><i class="fas fa-trash-alt"></i></button>
-                </div>
+        <div className="Item__inbox">
+            <div className="Item__description">{props.name}</div>
+            <div className="Item__value">-${parseFloat(props.amount).toFixed(2)}</div>
+            <div className="Item__date">{props.date}</div>
+            <div className="Item__delete">
+                <button onClick={() => removeItem()} className="Item__delete--btn"><i class="fas fa-trash-alt"></i></button>
             </div>
         </div>
     )

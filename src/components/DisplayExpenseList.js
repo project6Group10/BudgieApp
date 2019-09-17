@@ -24,12 +24,13 @@ class DisplayExpenseList extends Component {
         return (
             <ul className="Expenses__list">
             {this.state.expenseLog ?
-                Object.keys(this.state.expenseLog).map((expense, index) => {
+                Object.keys(this.state.expenseLog).reverse().map((expense, index) => {
                     return ( 
                         <li className="Item" key={index}>
                             <DisplayExpenseItems 
                                 name={this.state.expenseLog[expense]['expenseName']}
                                 amount={this.state.expenseLog[expense]['expenseAmount']}
+                                date={this.state.expenseLog[expense]['expenseDate']}
                                 index={index}
                                 uid={expense}
                             />
