@@ -1,11 +1,8 @@
-/* eslint-disable jsx-a11y/anchor-has-content */
-import React, { Component } from 'react';
+import React from 'react';
 import BudgieLogo from '../assets/budgie.png';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
-
-class Home extends Component {
-    render() { 
+const Home = () =>  {
         return ( 
             <div className="home">
                 <nav className="navigation">
@@ -34,7 +31,6 @@ class Home extends Component {
                 </main>
             </div>
         );
-    }
 }
 
 export default Home;

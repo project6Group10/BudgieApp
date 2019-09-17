@@ -10,7 +10,7 @@ class CalcDailyBudget extends Component {
             currentDate: "",
             nextPayday: "",
             daysDifference: 1,
-            salaryAmount: 0,
+            salaryAmount: '0.00',
             dailyBudget: ""
         }
     }
@@ -86,7 +86,7 @@ class CalcDailyBudget extends Component {
             const salary = amount.val();
             if (amount.val() == null) {
                 this.setState({
-                    salaryAmount: 0,
+                    salaryAmount: '0.00',
                     daysDifference: 1,
                 }, () => {
                     const budget = (this.state.salaryAmount - this.state.expenseTotal) / this.state.daysDifference;
