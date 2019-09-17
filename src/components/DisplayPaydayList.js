@@ -37,7 +37,7 @@ class DisplayPaydayList extends Component {
                             />
                         </li>             
                     );
-                }) : <li><p>Enter Payday Information Above</p></li>}
+                }) : <li><p className="accessible">Enter Payday Information Above</p></li>}
             </ul>
         )
     }
