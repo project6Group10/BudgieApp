@@ -71,7 +71,7 @@ class CalcDailyBudget extends Component {
                     let date1 = new Date(this.state.currentDate.toString());
                     let date2 = new Date(this.state.nextPayday.toString());
                     const Difference_In_Time = date2.getTime() - date1.getTime();
-                    const Difference_In_Days = Math.floor(Difference_In_Time / (1000 * 3600 * 24));
+                    const Difference_In_Days = Math.ceil(Difference_In_Time / (1000 * 3600 * 24));
                     this.setState({
                         daysDifference: Difference_In_Days,
                     })
