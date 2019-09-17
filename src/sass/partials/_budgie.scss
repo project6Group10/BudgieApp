@@ -165,7 +165,7 @@
 	}
 	
 	&__list {
-		overflow: scroll;
+		overflow-y: scroll;
 		height: 15rem;
 
 		
@@ -228,7 +228,7 @@
 	}
 	
 	&__list {
-		overflow: scroll;
+		overflow-y: scroll;
 		height: 15rem;
 	}
 }
