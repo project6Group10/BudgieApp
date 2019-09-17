@@ -15,6 +15,23 @@ class CalcDailyBudget extends Component {
         }
     }
 
+    dateComparison = () => {
+        let date1 = new Date(this.state.currentDate.toString());
+        let date2 = new Date(this.state.nextPayday.toString());
+        const Difference_In_Time = date2.getTime() - date1.getTime();
+        const Difference_In_Days = Math.ceil(Difference_In_Time / (1000 * 3600 * 24));
+        this.setState({
+            daysDifference: Difference_In_Days,
+        }, () => { this.dailyBudgetCalc() })
+    }
+
+    dailyBudgetCalc = () => {
+        const budget = (this.state.salaryAmount - this.state.expenseTotal) / this.state.daysDifference;
+        this.setState({
+            dailyBudget: budget.toFixed(2),
+        })
+    }
+
     //FUNCTION GRABS TODAY'S DATE USING JS
     getTodaysDate = () => {
         //SAVES DATE TO CONSTANT AND SLICES OUT EXTRNEOUS I?NFORMATIO?N
@@ -26,7 +43,6 @@ class CalcDailyBudget extends Component {
     }
     
     componentDidMount() {
-        
         // SETS A CONST FOR THE EXPENSE ITEMS FIREBASE REFERENCE
         const expRef = firebase.database().ref('expenseItems').orderByChild('expenseAmount')
         // LISTENS FOR CHANGE IN FIREBASE EXPENSE AMOUNTS
@@ -47,12 +63,7 @@ class CalcDailyBudget extends Component {
             this.setState({
                 expenseTotal: total.toFixed(2),
                 // WAITS FOR EXPENSETOTAL TO BE SET THEN RECALCULATES DAILY BUDGET
-            }, () => {
-                const budget = (this.state.salaryAmount - this.state.expenseTotal) / this.state.daysDifference;
-                this.setState({
-                    dailyBudget: budget.toFixed(2),
-                })
-            })
+            }, () => { this.dailyBudgetCalc() })
         })
 
         this.getTodaysDate();
@@ -67,21 +78,7 @@ class CalcDailyBudget extends Component {
                 this.setState({
                     nextPayday: dateArray[key].salaryDate
                     // WAITS FOR DATE TO BE SET THEN CALCULATES THE DIFFERENCE IN DAYS BETWEEN THEN AND NOW
-                }, () => {
-                    let date1 = new Date(this.state.currentDate.toString());
-                    let date2 = new Date(this.state.nextPayday.toString());
-                    const Difference_In_Time = date2.getTime() - date1.getTime();
-                    const Difference_In_Days = Math.ceil(Difference_In_Time / (1000 * 3600 * 24));
-                    this.setState({
-                        daysDifference: Difference_In_Days,
-                    }, () => {
-                        const budget = (this.state.salaryAmount - this.state.expenseTotal) / this.state.daysDifference;
-                        this.setState({
-                            dailyBudget: budget.toFixed(2),
-                        })
-                    })
-                    
-                })
+                }, () => { this.dateComparison() })
             }
         })
 
@@ -94,23 +91,13 @@ class CalcDailyBudget extends Component {
                 this.setState({
                     salaryAmount: '0.00',
                     daysDifference: 1,
-                }, () => {
-                    const budget = (this.state.salaryAmount - this.state.expenseTotal) / this.state.daysDifference;
-                    this.setState({
-                        dailyBudget: budget.toFixed(2),
-                    })
-                })
+                }, () => { this.dailyBudgetCalc() })
             } else {
             for (let key in salary) {
                 this.setState({
                     salaryAmount: salary[key].salaryAmount
                     // RECALCULATES DAILY BUDGET ON CHANGE
-                }, () => {
-                    const budget = (this.state.salaryAmount - this.state.expenseTotal) / this.state.daysDifference;
-                    this.setState({
-                        dailyBudget: budget.toFixed(2),
-                    })
-                })
+                }, () => { this.dailyBudgetCalc() })
             }}
         })
     }
