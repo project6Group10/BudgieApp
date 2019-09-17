@@ -122,6 +122,7 @@
 	transition: border 0.3s;
 }
 
+
 //////////////////////////////////////////////////////////////////////////////////////
 // Salary style 
 //////////////////////////////////////////////////////////////////////////////////////
@@ -133,6 +134,11 @@
 
 	&__description {
 		width: 62%;
+	}
+
+	&__description::placeholder {
+		color: var(--color-primary-dark);
+		opacity: 1;
 	}
 	
 	&__date { 
@@ -181,13 +187,24 @@
 	&__description { 
         width: 35%;
 	}
+
+	&__description::placeholder { 
+		color: var(--color-primary-dark);
+		opacity: 1;
+	}
+
 	
     &__value { 
         width: 25%;
 	}
 
+	&__value::placeholder {
+		color: var(--color-primary-dark);
+		opacity: 1;
+	}
+
 	&__date { 
-        width: 30%;
+		width: 30%;
 	}
 	
     &__btn {
@@ -275,4 +292,8 @@
 	}
 }
 
+.accessible {
+	color: var(--color-primary-dark);
+	padding-top: 15px;
+}
 
