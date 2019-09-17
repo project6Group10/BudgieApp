@@ -25,23 +25,7 @@ class InputPayday extends Component {
     }
 
     handleSalaryDateInput = (event) => {
-        const today = new Date();
-        const tomorrow = new Date();
-        tomorrow.setDate(today.getDate() + 1);
-        const now = tomorrow.toJSON().slice(0, 10).replace(/-/g, '/');
-        const payday = new Date(event.target.value).toJSON().slice(0, 10).replace(/-/g, '/');
-        if(payday < now){
-            Swal.fire(
-                'Whoops...',
-                'Please enter a date after today.',
-                'error'
-            );
-            event.target.value = "";
-        } else {
-            this.setState({
-                salaryDateInput: event.target.value
-            })
-        }   
+        this.setState({ salaryDateInput: event.target.value })
     }
 
     handleSalarySubmit = (event) => {
