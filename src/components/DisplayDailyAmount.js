@@ -5,7 +5,7 @@ const DisplayDailyAmount = (props) => {
         <div>
             <section className="Budget">
                 <p className="Budget__title">
-                    Daily budget for the next <span className="Budget__title--month">{props.days} {(props.days == 1 ? 'day' : 'days')}</span>:
+                    Daily budget for the next <span className="Budget__title--month">{props.days} {(props.days === 1 ? 'day' : 'days')}</span>:
                 </p>
                 <p className="Budget__value">$ {props.budget}</p>
                 <div className="info">

@@ -36,7 +36,7 @@ class InputPayday extends Component {
         const now = tomorrow.toJSON().slice(0, 10).replace(/-/g, '/');
         const payday = new Date(this.state.salaryDateInput).toJSON().slice(0, 10).replace(/-/g, '/');
 
-        if (this.state.salaryInput > 0 && this.state.salaryDateInput) {
+        if (this.state.salaryInput > 0 && this.state.salaryDateInput && payday > now) {
             this.salaryRef.set({
                 salaryAmount: this.state.salaryInput,
                 salaryDate: this.state.salaryDateInput,
@@ -62,7 +62,8 @@ class InputPayday extends Component {
                 'Please enter a pay date!',
                 'error'
             );
-        } else if (payday <now) {
+        } else if (payday < now) {
+            console.log('bad')
                 Swal.fire(
                     'Whoops...',
                     'Please enter a date after today.',
