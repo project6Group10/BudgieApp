@@ -34,10 +34,10 @@ class Budget extends Component {
                   <div className="Expenses__inputs">
                      <input type="text" className="Expenses__description" placeholder="Add Item"/>
                      <input type="number" className="Expenses__value" placeholder="Value"/>
-                     <button className="Expenses__btn"><i class="far fa-check-circle"></i></button> 
+                     <button className="Expenses__btn"><i className="far fa-check-circle"></i></button> 
                   </div>
                
-                <div class="Expenses__list">
+                <div className="Expenses__list">
                         <div className="Item " id="expense-0">
                             <div className="Item__inbox">
                             <div className="Item__description">Apartment rent</div>   

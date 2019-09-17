@@ -17,7 +17,7 @@ const DisplayPaydayItems = (props) => {
                     aria-label="Delete payday item."
                     aria-hidden="true"
                 >
-                    <i class="fas fa-trash-alt"></i>
+                    <i className="fas fa-trash-alt"></i>
                 </button>
             </span>
         </div>
