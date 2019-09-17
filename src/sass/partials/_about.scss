@@ -99,10 +99,23 @@
         }
     }
 
+    .title {
+        font-size: 5rem;
+        margin-top: 3.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .subtitle{
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+
+
     .paragraph {
-        width: 100%;
+        width: 80%;
         text-align: center;
         font-size: 2.2rem;
+        text-align: justify;
     }
 
     .col-2-of-2 {
@@ -120,13 +133,14 @@
     }
 
     .title {
-        font-size: 3rem;
+        font-size: 4rem;
         margin: 1.5rem;
     }
 
-    .subtitle{
-        font-size: 2.5rem;
+    .subtitle {
+        font-size: 2.7rem;
     }
+
 }
 
 @media only screen and (max-width: 414px) {
