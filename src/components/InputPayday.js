@@ -67,7 +67,7 @@ class InputPayday extends Component {
     
                 this.salaryInputRef.current.reset();
 
-            } else if (payday < now) {
+            } else if (payday <= now) {
                 Swal.fire(
                     'Whoops...',
                     'Please enter a date after today.',
